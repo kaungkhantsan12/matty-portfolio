@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio - Matty</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@600;700&family=Open+Sans:wght@400;500;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+
+</head>
+<body id="top">
+
+  <!-- Header -->
+<header class="header fixed-top">
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+      <!-- Logo -->
+      <a href="#top" class="logo navbar-brand d-flex align-items-center">
+        <h1 class="mb-0">Matty</h1>
+      </a>
+
+      <!-- Navbar toggler button -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Navigation menu -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" 
+              aria-expanded="false">
+              About
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#about">About</a></li>
+              <li><a class="dropdown-item" href="#education">Education</a></li>
+              <li><a class="dropdown-item" href="#experience">Sub </a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
+          <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
+          <li class="nav-item"><a href="#hobby" class="nav-link">Hobby</a></li>
+          <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+          
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+
+
+  
+
+  <!-- Home Section -->
+<section id="home" class="home py-5 d-flex align-items-center" style="height: 100vh;">
+  <div class="container text-center text-lg-start">
+    <div class="row align-items-center">
+      <!-- Text Content -->
+      <div class="col-lg-6 col-md-12 mb-4">
+        <h1 class="hero-title">
+          Hello, I'm <span class="highlight">Matty</span>
+        </h1>
+        <p class="hero-text">
+          I am a <span id="profession" class="typewriter-text"></span>
+        </p>
+        <div class="btn-group mt-3">
+          <a href="#contact" class="btn btn-primary me-3">Let’s Talk</a>
+          <a href="#projects" class="btn btn-outline-secondary">Portfolio</a>
+        </div>
+        <div class="social-links mt-4">
+
+          <!-- GitHub School -->
+          <a href="https://github.com/MattyKKS" class="social-link me-3" target="_blank" aria-label="GitHub School">
+            <i class="fa-brands fa-github fa-lg"></i>
+          </a>
+        
+          <!-- GitHub Personal -->
+          <a href="https://github.com/kaungkhantsan12" class="social-link me-3" target="_blank" aria-label="GitHub Personal">
+            <i class="fa-brands fa-github-alt fa-lg"></i>
+          </a>
+        
+          <!-- Facebook -->
+          <a href="https://www.facebook.com/kaung.khantsan.3" class="social-link me-3" target="_blank" aria-label="Facebook">
+            <i class="fa-brands fa-facebook fa-lg"></i>
+          </a>
+        
+          <!-- LinkedIn -->
+          <a href="https://www.linkedin.com/in/kaung-khantsan-338586153" class="social-link" target="_blank" aria-label="LinkedIn">
+            <i class="fa-brands fa-linkedin fa-lg"></i>
+          </a>
+        
+        </div>
+        
+      </div>
+
+      <!-- Profile Picture -->
+      <div class="col-lg-6 col-md-12 text-center">
+        <div class="profile-container position-relative">
+          <img src="./assets/images/profile.jpg" alt="Profile Picture" class="rounded-circle img-fluid profile-photo">
+          <div class="circle-overlay"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- About Section -->
+<section id="about" class="about">
+  <div class="container">
+    <h2 class="section-title">About Me</h2>
+    
+    <div class="about-content">
+      <!-- Left Side (About Text) -->
+      <div class="about-text">
+        <p>
+          I’m a globally-minded software engineer blending rigorous academic foundations with hands-on, full-cycle project experience. Now pursuing my B.Sc. in Software Engineering at Chiang Mai University (#2 in Thailand), I bring a unique edge from three formative years in Mechanical Engineering at Yangon Technological University—cut short by civil unrest, but rich in analytical training. With over a decade in Japan and continued immersion in Thailand’s tech ecosystem, I thrive in cross-cultural, fast-paced environments. From building scalable full-stack platforms and AI prototypes to producing multimedia content and managing digital communities, I solve problems with creativity, structure, and heart. My journey spans startups, freelance writing, financial consulting, and YouTube content creation—demonstrating both initiative and impact across industries.
+        </p>
+        
+        <a href="#" class="btn">Download CV</a>
+      </div>
+
+      <!-- Right Side (Info Boxes) -->
+      <div class="info-boxes w-100">
+        <div class="info-box mb-4" data-aos="fade-right" data-aos-delay="100">
+          <h4>🚀 What I Do</h4>
+          <p>
+            I build production-ready full-stack systems, real-time apps, and AI prototypes—merging frontend precision with backend robustness. Every project I deliver is optimized for speed, scalability, and meaningful user experience.
+          </p>
+        </div>
+      
+        <div class="info-box mb-4" data-aos="fade-right" data-aos-delay="200">
+          <h4>💡 What I'm Good At</h4>
+          <p>
+            I bring together Java, Python, JavaScript, SQL, and UI/UX best practices to engineer elegant, reliable solutions. My edge lies in connecting technical depth with design clarity and iterative development.
+          </p>
+        </div>
+      
+        <div class="info-box mb-4" data-aos="fade-right" data-aos-delay="300">
+          <h4>🔥 My Passion</h4>
+          <p>
+            I’m passionate about solving complex problems and making technology human. Whether it’s gamified learning, visual storytelling, or data-driven tools—I craft code that speaks to real-world needs.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- Education Section -->
+<section id="education" class="education my-5 text-center">
+  <div class="container">
+    <h2><i class="fas fa-user-graduate me-2"></i>Education</h2>
+    <div class="row g-4">
+      
+      <!-- CMU -->
+      <div class="col-md-4 d-flex">
+        <div class="education-box flex-fill p-3" data-aos="zoom-in" data-aos-delay="100">
+          <i class="fas fa-university"></i>
+          <p><strong>Chiang Mai University</strong></p>
+          <p>B.Sc. in Software Engineering (2023 – 2027)<br><em>Top 10% of cohort</em></p>
+        </div>
+      </div>
+
+      <!-- YTU -->
+      <div class="col-md-4 d-flex">
+        <div class="education-box flex-fill p-3" data-aos="zoom-in" data-aos-delay="200">
+          <i class="fas fa-graduation-cap"></i>
+          <p><strong>Yangon Technological University</strong></p>
+          <p>Mechanical Engineering (2017 – 2021)<br><em>3rd Year | Interrupted by military coup</em></p>
+        </div>
+      </div>
+
+      <!-- Akamonkai -->
+      <div class="col-md-4 d-flex">
+        <div class="education-box flex-fill p-3" data-aos="zoom-in" data-aos-delay="300">
+          <i class="fas fa-language"></i>
+          <p><strong>Akamonkai Japanese Language School</strong></p>
+          <p>Japanese Language Program (2021 – 2022)</p>
+        </div>
+      </div>
+
+      <!-- Certificates -->
+      <div class="col-md-12 d-flex">
+        <div class="education-box flex-fill p-3" data-aos="zoom-in" data-aos-delay="400">
+          <i class="fas fa-certificate"></i>
+          <p><strong>Self-Learning Certifications</strong></p>
+          <p>Harvard CS50x · Coursera AI For Everyone</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+<!-- Experience Section -->
+<div id="experience" class="experience my-5 text-center">
+  <h3 class="text-center mb-4 text-warning">Experience</h3>
+  <div class="container">
+    <div class="row g-4 justify-content-center">
+
+      <!-- Financial Services Consultant -->
+      <div class="col-md-4 d-flex">
+        <div class="experience-box flex-fill p-4" data-aos="zoom-in" data-aos-delay="100">
+          <p><i class="fas fa-briefcase fa-lg text-info me-2"></i> <strong>Financial Services Consultant</strong></p>
+          <p>AIA Myanmar (2020–2021)</p>
+          <p>Advised clients on life and health insurance, fostering long-term financial security.</p>
+        </div>
+      </div>
+
+      <!-- Freelance Writer -->
+      <div class="col-md-4 d-flex">
+        <div class="experience-box flex-fill p-4" data-aos="zoom-in" data-aos-delay="150">
+          <p><i class="fas fa-pen-nib fa-lg text-light me-2"></i> <strong>Freelance Content Writer</strong></p>
+          <p>M Tech (2018–2019)</p>
+          <p>Wrote technical articles and collaborated with experts for quality educational content.</p>
+        </div>
+      </div>
+
+      <!-- Co-Founder -->
+      <div class="col-md-4 d-flex">
+        <div class="experience-box flex-fill p-4" data-aos="zoom-in" data-aos-delay="200">
+          <p><i class="fas fa-futbol fa-lg text-success me-2"></i> <strong>Co-Founder & Lead Writer</strong></p>
+          <p>Your Football in Arakanese (2019–Present)</p>
+          <p>Launched a cultural sports platform and led a nonprofit youth language movement.</p>
+        </div>
+      </div>
+
+      <!-- YouTube Creator -->
+      <div class="col-md-4 d-flex">
+        <div class="experience-box flex-fill p-4" data-aos="zoom-in" data-aos-delay="250">
+          <p><i class="fab fa-youtube fa-lg text-danger me-2"></i> <strong>YouTube Content Creator</strong></p>
+          <p><a href="https://youtube.com/@pastbeyondwithm?si=jgZyZvM4FFplUFoZ" target="_blank" class="text-white text-decoration-underline">Past & Beyond with M</a></p>
+          <p>Produce tech, history & freestyle videos. Manage scripting, editing, publishing, and audience engagement.</p>
+        </div>
+      </div>
+
+      <!-- Service & Logistics -->
+      <div class="col-md-4 d-flex">
+        <div class="experience-box flex-fill p-4" data-aos="zoom-in" data-aos-delay="300">
+          <p><i class="fas fa-people-carry fa-lg text-warning me-2"></i> <strong>Service & Logistics Roles</strong></p>
+          <p>Japan (2021–2023)</p>
+          <p>Worked as <strong>Waiter</strong> (Bodaiju), <strong>Store Clerk</strong> (7-Eleven), and <strong>Uber Eats Delivery Partner</strong>. Built teamwork, time management, and customer service skills.</p>
+        </div>
+      </div>
+
+      <!-- Digital Platform Manager -->
+      <div class="col-md-4 d-flex">
+        <div class="experience-box flex-fill p-4" data-aos="zoom-in" data-aos-delay="350">
+          <p><i class="fas fa-network-wired fa-lg text-primary me-2"></i> <strong>Digital Platform Manager</strong></p>
+          <p>Arakan Student Association (2025–Present)</p>
+          <p>Oversee digital content, manage social media, and coordinate internal communication for the student body.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+  
+<!-- Skills Section -->
+<section id="skills" class="skills py-5">
+  <div class="container">
+    <h2 class="text-center">Skills</h2>
+    <div class="row">
+      <!-- Skill 1 -->
+      <div class="col-md-4 skill-box" data-aos="fade-up" data-aos-delay="100">
+        <p>HTML/CSS</p>
+        <div class="progress">
+          <div class="progress-bar" style="width: 90%;">90%</div>
+        </div>
+      </div>
+
+      <!-- Skill 2 -->
+      <div class="col-md-4 skill-box" data-aos="fade-up" data-aos-delay="200">
+        <p>JavaScript</p>
+        <div class="progress">
+          <div class="progress-bar bg-warning" style="width: 80%;">80%</div>
+        </div>
+      </div>
+
+      <!-- Skill 3 -->
+      <div class="col-md-4 skill-box" data-aos="fade-up" data-aos-delay="300">
+        <p>Bootstrap</p>
+        <div class="progress">
+          <div class="progress-bar bg-success" style="width: 90%;">90%</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <!-- Skill 4 -->
+      <div class="col-md-4 skill-box" data-aos="fade-up" data-aos-delay="100">
+        <p>Java</p>
+        <div class="progress">
+          <div class="progress-bar bg-success" style="width: 90%;">90%</div>
+        </div>
+      </div>
+
+      <!-- Skill 5 -->
+      <div class="col-md-4 skill-box" data-aos="fade-up" data-aos-delay="200">
+        <p>Python</p>
+        <div class="progress">
+          <div class="progress-bar bg-success" style="width: 90%;">90%</div>
+        </div>
+      </div>
+
+      <!-- Skill 6 -->
+      <div class="col-md-4 skill-box" data-aos="fade-up" data-aos-delay="300">
+        <p>SQL</p>
+        <div class="progress">
+          <div class="progress-bar bg-info" style="width: 80%;">80%</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <!-- Skill 7 -->
+      <div class="col-md-4 skill-box" data-aos="fade-up" data-aos-delay="100">
+        <p>Git</p>
+        <div class="progress">
+          <div class="progress-bar bg-warning" style="width: 60%;">60%</div>
+        </div>
+      </div>
+
+      <!-- Skill 8 -->
+      <div class="col-md-4 skill-box" data-aos="fade-up" data-aos-delay="200">
+        <p>Machine Learning</p>
+        <div class="progress">
+          <div class="progress-bar bg-danger" style="width: 70%;">70%</div>
+        </div>
+      </div>
+
+      <!-- Skill 9 -->
+      <div class="col-md-4 skill-box" data-aos="fade-up" data-aos-delay="300">
+        <p>Data Analysis</p>
+        <div class="progress">
+          <div class="progress-bar bg-danger" style="width: 70%;">70%</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<!-- Projects Section -->
+<section id="projects" class="projects py-5">
+  <div class="container-fluid">
+    <h2 class="text-center text-white">Projects</h2>
+    <p class="text-center text-white">A showcase of my projects.</p>
+
+    <!-- Bootstrap Carousel -->
+    <div id="projectCarousel" class="carousel slide" data-ride="carousel">
+      <!-- Dynamic Indicators -->
+      <ol class="carousel-indicators" id="carousel-indicators"></ol>
+
+      <!-- Dynamic Carousel Content -->
+      <div class="carousel-inner" id="project-container"></div>
+
+      <!-- Carousel Controls -->
+      <a class="carousel-control-prev" href="#projectCarousel" role="button" data-slide="prev">
+        <i class="fas fa-chevron-left fa-2x text-warning"></i>
+      </a>
+      <a class="carousel-control-next" href="#projectCarousel" role="button" data-slide="next">
+        <i class="fas fa-chevron-right fa-2x text-warning"></i>
+      </a>
+      
+    </div>
+  </div>
+</section>
+
+<section id="competencies" class="competencies py-5" style="background: #021933; color: #fff;">
+  <div class="container">
+    <h2 class="text-center mb-5">Technical & Professional Competencies</h2>
+    <div class="row g-4">
+      <!-- Card 1 -->
+      <div class="col-md-6" data-aos="fade-up" data-aos-duration="800">
+        <div class="card h-100 bg-dark text-light border-warning">
+          <div class="card-body">
+            <h5 class="card-title"><i class="fas fa-code me-2 text-warning"></i>Full Stack & Frameworks</h5>
+            <p class="card-text">Java · JavaScript/TypeScript · Python · Vue.js · React · Node.js/Express · EJS · HTML5 · CSS3 · Bootstrap</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-md-6" data-aos="fade-up" data-aos-duration="800">
+        <div class="card h-100 bg-dark text-light border-warning">
+          <div class="card-body">
+            <h5 class="card-title"><i class="fas fa-database me-2 text-warning"></i>Databases & Data</h5>
+            <p class="card-text">SQL · PostgreSQL · Data Modeling · Query Optimization</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-md-6" data-aos="fade-up" data-aos-duration="800">
+        <div class="card h-100 bg-dark text-light border-warning">
+          <div class="card-body">
+            <h5 class="card-title"><i class="fas fa-tools me-2 text-warning"></i>DevOps & Cloud</h5>
+            <p class="card-text">Docker · AWS EC2 · GitHub Actions (CI/CD) · Tomcat · Terraform basics · Kubernetes fundamentals</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="col-md-6" data-aos="fade-up" data-aos-duration="800">
+        <div class="card h-100 bg-dark text-light border-warning">
+          <div class="card-body">
+            <h5 class="card-title"><i class="fas fa-terminal me-2 text-warning"></i>Other Tools</h5>
+            <p class="card-text">Linux/Unix · Microsoft Word · Excel · PowerPoint · Outlook · Teams · OneDrive</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="col-md-6" data-aos="fade-up" data-aos-duration="800">
+        <div class="card h-100 bg-dark text-light border-warning">
+          <div class="card-body">
+            <h5 class="card-title"><i class="fas fa-shield-alt me-2 text-warning"></i>APIs & Security</h5>
+            <p class="card-text">RESTful API Design · OAuth2/JWT · OWASP Best Practices · JUnit · Networking Principles · Cybersecurity Awareness</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="col-md-6" data-aos="fade-up" data-aos-duration="800">
+        <div class="card h-100 bg-dark text-light border-warning">
+          <div class="card-body">
+            <h5 class="card-title"><i class="fas fa-brain me-2 text-warning"></i>AI & Analytics</h5>
+            <p class="card-text">Python Scripting · ML Basics · AI Prompting Techniques · OpenCV · Football Analytics Pipelines</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 7 -->
+      <div class="col-md-6" data-aos="fade-up" data-aos-duration="800">
+        <div class="card h-100 bg-dark text-light border-warning">
+          <div class="card-body">
+            <h5 class="card-title"><i class="fas fa-paint-brush me-2 text-warning"></i>Creative & Multimedia</h5>
+            <p class="card-text">Photoshop · Premiere Pro · After Effects · DaVinci Resolve · Animation · Canva · Figma · Directing (Coursework)</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 8 -->
+      <div class="col-md-6" data-aos="fade-up" data-aos-duration="800">
+        <div class="card h-100 bg-dark text-light border-warning">
+          <div class="card-body">
+            <h5 class="card-title"><i class="fas fa-users-cog me-2 text-warning"></i>Methodologies & Collaboration</h5>
+            <p class="card-text">Agile (Scrum/Kanban) · Git · GitHub Workflows · Team Leadership · Stakeholder Management</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Languages & Advocacy Section -->
+<section id="languages" class="languages py-5" style="background: #00053e; color: #fff;">
+  <div class="container text-center">
+    <h2 class="mb-4">Languages & Advocacy</h2>
+    <div class="row justify-content-center">
+
+      <!-- English -->
+      <div class="col-md-4 col-sm-6 mb-4" data-aos="fade-left" data-aos-duration="800">
+        <i class="fas fa-flag-usa fa-2x mb-2" style="color: #3c3b6e;"></i>
+        <h5>English</h5>
+        <p>IELTS 7.5</p>
+      </div>
+
+      <!-- Japanese -->
+      <div class="col-md-4 col-sm-6 mb-4" data-aos="zoom-in" data-aos-duration="800">
+        <i class="fas fa-language fa-2x mb-2" style="color: #bc002d;"></i>
+        <h5>Japanese</h5>
+        <p>JLPT N2</p>
+      </div>
+
+      <!-- Myanmar & Rakhine -->
+      <div class="col-md-4 col-sm-6 mb-4" data-aos="fade-right" data-aos-duration="800">
+        <i class="fas fa-globe-asia fa-2x mb-2" style="color: #ffcc00;"></i>
+        <h5>Myanmar & Rakhine</h5>
+        <p>Native Speaker</p>
+      </div>
+
+      <!-- Thai -->
+      <div class="col-md-4 col-sm-6 mb-4" data-aos="zoom-in-up" data-aos-duration="800">
+        <i class="fas fa-flag fa-2x mb-2" style="color: #00247d;"></i>
+        <h5>Thai</h5>
+        <p>Currently Learning</p>
+      </div>
+
+      <!-- Spanish -->
+      <div class="col-md-4 col-sm-6 mb-4" data-aos="zoom-in-up" data-aos-duration="800">
+        <i class="fas fa-flag fa-2x mb-2" style="color: #aa151b;"></i>
+        <h5>Spanish</h5>
+        <p>Currently Learning</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+  <!-- Hobby Section -->
+<section id="hobby" class="hobby py-5" style="background: #0b0e2e; color: #fff;">
+  <div class="container">
+    <h2 class="text-center">Hobbies</h2>
+    <p class="text-center">Details about hobbies and interests.</p>
+    <div class="row text-center">
+      <!-- Hobby 1: Football -->
+      <div class="col-md-3">
+        <div class="hobby-box">
+          <i class="fas fa-futbol fa-3x"></i>
+          <h4>Football</h4>
+          <p>Enjoy playing and watching football.</p>
+        </div>
+      </div>
+      <!-- Hobby 2: Movie -->
+      <div class="col-md-3">
+        <div class="hobby-box">
+          <i class="fas fa-film fa-3x"></i>
+          <h4>Movies</h4>
+          <p>Exploring different genres and films.</p>
+        </div>
+      </div>
+      <!-- Hobby 3: Hip Hop -->
+      <div class="col-md-3">
+        <div class="hobby-box">
+          <i class="fas fa-headphones fa-3x"></i>
+          <h4>Hip Hop</h4>
+          <p>Listening to and dancing to hip hop music.</p>
+        </div>
+      </div>
+      <!-- Hobby 4: Reading -->
+      <div class="col-md-3">
+        <div class="hobby-box">
+          <i class="fas fa-book fa-3x"></i>
+          <h4>Reading</h4>
+          <p>Reading books on various topics.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Contact Section -->
+<section id="contact" class="contact py-5" style="background: #010209; color: #fff;">
+  <div class="container text-center">
+    <h2>Have an Idea? Let’s Talk Code & Coffee ☕</h2>
+    <form action="https://formspree.io/f/mzzrrgka" method="POST" class="mt-4" style="max-width: 600px; margin: auto;">
+      <div class="mb-3">
+        <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+      </div>
+      <div class="mb-3">
+        <input type="email" name="email" class="form-control" placeholder="Your Email" required>
+      </div>
+      <div class="mb-3">
+        <textarea name="message" rows="5" class="form-control" placeholder="Your Message" required></textarea>
+      </div>
+      <button type="submit" class="btn btn-warning">Send Message</button>
+    </form>
+  </div>
+</section>
+
+
+  <!-- Footer -->
+  <footer class="footer text-center py-3">
+    <p>© 2025 Matty. All rights reserved.</p>
+    <!-- Back to Top Button -->
+  <a href="#top" class="back-to-top" data-back-to-top>BACK TO TOP</a>
+  </footer>
+  
+  <!-- Custom JS -->
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  
+  <!-- Ionicons for icons -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+
+<!-- Popper.js (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+
+<!-- Bootstrap JS -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+
+</body>
+</html>
