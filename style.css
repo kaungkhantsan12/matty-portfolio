@@ -20,106 +20,116 @@ body {
   line-height: 1.6;
   color: #333;
   background-color: #f4f4f4;
+  overflow-x: hidden;
 }
 
-/* Header */
-header {
-  background-color: hsl(243, 23%, 18%);
-  --shadow: 0 -5px 10px var(--manatee);
-  box-shadow: var(--shadow);
-  position: fixed;
-  top: 0;
-  padding: 20px 0;
-  width: 100%;
-  color: #fff;
-  --cubic-out: cubic-bezier(0.33, 0.85, 0.56, 1.02);
-  transition: 0.25s var(--cubic-out);
-  z-index: 5;
-}
-
-
-header .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  top: 0;
-}
-
-header .logo {
-  font-size: 20rem;
-  font-weight: bold;
-  color: #fff;
-  margin-left: 20px;
-  cursor: pointer;
-  transition: 0.3s ease;
-}
-
-.logo:hover {
-  transform: scale(1.1);
-}
-
-.logo span{
-  text-shadow: 0 0 24px white;
-}
-
-header .navbar {
-  display: flex;
-  font-size: 1.5rem;
-}
-
-
-header .navbar-list {
-  list-style: none;
-  display: flex;
-}
-
-header .navbar-link {
-  text-decoration: none;
-  color: #fff;
-  margin-left: 20px;
-  font-weight: 600;
-}
-
-header .navbar-link:hover {
-  color: #f1c40f;
-}
-
-/* Mobile Responsiveness */
-@media (max-width: 768px) {
-  .header .container {
-    display: flex; /* Flexbox layout for horizontal alignment */
-    flex-direction: row; /* Ensure logo and button are side by side */
-    align-items: center; /* Vertically align logo and button */
-    justify-content: space-between; /* Space between logo and button */
-  }
-
-  .navbar-list {
-    flex-direction: column;
-    display: none;
+  /* Header */
+  header {
+    background-color: hsl(243, 23%, 18%);
+    --shadow: 0 -5px 10px var(--manatee);
+    box-shadow: var(--shadow);  
+    position: fixed;
+    top: 0;
+    padding: 20px 0;
     width: 100%;
-    margin-top: 20px;
+    color: #fff;
+    --cubic-out: cubic-bezier(0.33, 0.85, 0.56, 1.02);
+    transition: 0.25s var(--cubic-out);
+    z-index: 5;
   }
 
-  .logo {
-    flex: 1; /* Ensures the logo stays on the left */
+
+  header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
   }
 
-  .navbar-link {
-    margin: 10px 0;
+  header .navbar {
+    display: flex;
+    font-size: 1.5rem;
+    height: 100%;
   }
 
-  .nav-toggle-btn {
-    display: block;
-    background: transparent;
-    border: none;
-    font-size: 24px;
-    cursor: pointer;
-  }
+  .navbar,
+.navbar-collapse,
+.navbar-nav {
+  background-color: hsl(243, 23%, 18%) !important; /* ✅ Match to header */
+}
 
-  .nav-toggle-btn.active + .navbar-list {
+
+  header .navbar-list {
+    list-style: none;
     display: flex;
   }
-}
+
+  header .navbar-link {
+    text-decoration: none;
+    color: #fff;
+    margin-left: 20px;
+    font-weight: 600;
+  }
+
+  header .navbar-link:hover {
+    color: #ffc107;
+  }
+
+  .navbar-brand {
+    font-size: 2rem; /* Adjusted for realistic size */
+    font-weight: bold;
+    color: #fff !important; /* Ensure it overrides Bootstrap defaults */
+    margin-left: 20px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .navbar-brand:hover {
+    transform: scale(1.1);
+  }
+  
+  .navbar-brand span {
+    text-shadow: 0 0 24px white;
+  }
+  
+
+  /* Mobile Responsiveness */
+  @media (max-width: 768px) {
+    .header .container {
+      display: flex; /* Flexbox layout for horizontal alignment */
+      flex-direction: row; /* Ensure logo and button are side by side */
+      align-items: center; /* Vertically align logo and button */
+      justify-content: space-between; /* Space between logo and button */
+    }
+
+    .navbar-list {
+      flex-direction: column;
+      display: none;
+      width: 100%;
+      margin-top: 20px;
+    }
+
+    .logo {
+      flex: 1; /* Ensures the logo stays on the left */
+    }
+
+    .navbar-link {
+      margin: 10px 0;
+    }
+
+    .nav-toggle-btn {
+      display: block;
+      background: transparent;
+      border: none;
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    .nav-toggle-btn.active + .navbar-list {
+      display: flex;
+      background-color: hsl(243, 23%, 18%) !important;
+    }
+  }
 
 /* Home Section */
 .home {
@@ -468,6 +478,7 @@ header .navbar-link:hover {
   margin: 10px;
   padding: 20px;
   background-color: #FFFFE0; /* Light yellow background for individual skill blocks */
+  color: #000;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;

@@ -16,43 +16,51 @@
 
   <!-- Header -->
 <header class="header fixed-top">
-  <nav class="navbar navbar-expand-lg navbar-dark">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
       <!-- Logo -->
-      <a href="#top" class="logo navbar-brand d-flex align-items-center">
-        <h1 class="mb-0">Matty</h1>
-      </a>
-
-      <!-- Navbar toggler button -->
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+      <a href="#top" class="navbar-brand">Matty</a>
+  
+      <!-- Toggle button for mobile -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-
-      <!-- Navigation menu -->
+  
+      <!-- Menu -->
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+  
+          <!-- About & Journey Dropdown -->
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" 
-              aria-expanded="false">
-              About
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="#about">About</a></li>
+            <a class="nav-link dropdown-toggle" href="#" id="journeyDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">Journey</a>
+            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="journeyDropdown">
+              <li><a class="dropdown-item" href="#about">About Me</a></li>
               <li><a class="dropdown-item" href="#education">Education</a></li>
-              <li><a class="dropdown-item" href="#experience">Sub </a></li>
+              <li><a class="dropdown-item" href="#experience">Experience</a></li>
             </ul>
           </li>
-          <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
-          <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
-          <li class="nav-item"><a href="#hobby" class="nav-link">Hobby</a></li>
-          <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
-          
+  
+          <!-- Capabilities Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="capabilitiesDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">Capabilities</a>
+            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="capabilitiesDropdown">
+              <li><a class="dropdown-item" href="#skills">Skills</a></li>
+              <li><a class="dropdown-item" href="#competencies">Technical Competencies</a></li>
+              <li><a class="dropdown-item" href="#languages">Languages & Advocacy</a></li>
+            </ul>
+          </li>
+  
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#hobby">Hobby</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Let's Connect</a></li>
         </ul>
       </div>
     </div>
-  </nav>
+  </nav>  
 </header>
 
 
@@ -518,13 +526,6 @@
     </div>
   </div>
 </section>
-
-
-
-
-
-
-
 
   <!-- Hobby Section -->
 <section id="hobby" class="hobby py-5" style="background: #0b0e2e; color: #fff;">
