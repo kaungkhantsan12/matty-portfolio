@@ -704,6 +704,52 @@ body {
 }
 
 
+.hobby-box {
+  cursor: pointer;
+  padding: 20px;
+  border-radius: 10px;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hobby-box.selected {
+  background-color: #111;
+  box-shadow: 0 0 12px #ffc107;
+}
+
+.hobby-details {
+  display: none;
+  background-color: #111;
+  padding: 20px;
+  color: #fff;
+  border-radius: 10px;
+  margin-top: 20px;
+  animation: slideFade 0.4s ease;
+}
+
+@keyframes slideFade {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.hobby-details .card {
+  border: 1px solid #444;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.hobby-details .card:hover {
+  transform: translateY(-5px);
+}
+
+.hobby-details ul li {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.hobby-details h4 {
+  font-weight: 600;
+}
+
+
 /* Contact Section */
 .contact {
   background-color: #fff;

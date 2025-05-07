@@ -148,3 +148,21 @@ window.addEventListener("scroll", function () {
     backTopBtn.classList.remove("active");
   }
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const hobbyBoxes = document.querySelectorAll(".hobby-box");
+  const detailPanels = document.querySelectorAll(".hobby-details");
+
+  hobbyBoxes.forEach(box => {
+    box.addEventListener("click", () => {
+      const hobbyId = box.dataset.hobby + "-details";
+
+      detailPanels.forEach(panel => {
+        panel.style.display = (panel.id === hobbyId && panel.style.display !== "block") ? "block" : "none";
+      });
+
+      hobbyBoxes.forEach(b => b.classList.remove("selected"));
+      box.classList.add("selected");
+    });
+  });
+});
