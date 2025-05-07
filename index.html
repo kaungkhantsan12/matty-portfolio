@@ -532,111 +532,158 @@
   <div class="container">
     <h2 class="text-center">Hobbies</h2>
     <p class="text-center">Click on a hobby to explore more.</p>
+    
     <div class="row text-center">
       <!-- Football -->
-      <div class="col-md-3">
+      <div class="col-md-3 col-6 mb-4">
         <div class="hobby-box" data-hobby="football">
-          <i class="fas fa-futbol fa-3x"></i>
+          <i class="fas fa-futbol fa-3x text-warning mb-2"></i>
           <h4>Football</h4>
           <p>Enjoy playing and watching football.</p>
         </div>
       </div>
       <!-- Movies -->
-      <div class="col-md-3">
+      <div class="col-md-3 col-6 mb-4">
         <div class="hobby-box" data-hobby="movies">
-          <i class="fas fa-film fa-3x"></i>
+          <i class="fas fa-film fa-3x text-danger mb-2"></i>
           <h4>Movies</h4>
           <p>Exploring genres and film-making.</p>
         </div>
       </div>
       <!-- Music -->
-      <div class="col-md-3">
+      <div class="col-md-3 col-6 mb-4">
         <div class="hobby-box" data-hobby="music">
-          <i class="fas fa-headphones fa-3x"></i>
+          <i class="fas fa-headphones fa-3x text-info mb-2"></i>
           <h4>Hip Hop</h4>
           <p>Listening to classic and modern rap.</p>
         </div>
       </div>
       <!-- Reading -->
-      <div class="col-md-3">
+      <div class="col-md-3 col-6 mb-4">
         <div class="hobby-box" data-hobby="reading">
-          <i class="fas fa-book fa-3x"></i>
+          <i class="fas fa-book fa-3x text-success mb-2"></i>
           <h4>Reading</h4>
           <p>Books that shaped my worldview.</p>
         </div>
       </div>
     </div>
 
-    <!-- Hobby Details Panels -->
-    <div class="hobby-details container py-4" id="football-details">
-      <div class="row">
-        <!-- Left Column: Your Achievements -->
+<!-- Football Details Section -->
+<div class="hobby-details container py-4" id="football-details">
+  <div class="row">
+    <!-- My Football Journey -->
+    <div class="col-md-6 mb-4">
+      <div class="card bg-dark text-white shadow p-4 h-100">
+        <h4 class="text-warning mb-3">
+          <i class="fas fa-trophy me-2"></i>My Football Journey
+        </h4>
+        <ul class="list-unstyled">
+          <li class="mb-2">
+            <i class="fas fa-futbol me-2 text-success"></i>
+            <strong>Middle School Champion</strong> – Regional Level
+          </li>
+          <li class="mb-2">
+            <i class="fas fa-users me-2 text-primary"></i>
+            <strong>Inter-University Runner-Up</strong> – YTU Mechanical Team
+          </li>
+          <li class="mb-2">
+            <i class="fas fa-heartbeat me-2 text-danger"></i>
+            Discipline, teamwork & sportsmanship
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Manchester United Fixtures (FcTables Widgets) -->
+    <div class="col-md-6 mb-4">
+      <div class="card bg-dark text-white shadow p-4 h-100">
+        <h4 class="text-danger mb-3">
+          <i class="fas fa-shield-alt me-2"></i>Manchester United Fixtures
+        </h4>
+
+    <!-- Last Match -->
+    <iframe frameborder="0" scrolling="no" width="100%" height="200"
+      src="https://www.fctables.com/teams/manchester-united-189577/iframe/?type=team-last-match&lang_id=2&country=67&template=1369&team=189577&timezone=Asia/Tokyo&time=24&width=100%25&height=200&font=Verdana&fs=12&lh=22&bg=0b0e2e&fc=ffffff&tlink=1&scfs=22&scfc=ffffff&scb=1&sclg=1&sh=1&hfb=1&hbc=3bafda&hfc=ffffff">
+    </iframe>
+
+
+<!-- Next Match Widget - FcTables Dark Theme -->
+<iframe frameborder="0" scrolling="no" width="100%" height="200"
+  src="https://www.fctables.com/teams/manchester-united-189577/iframe/?type=team-next-match&lang_id=2&country=67&template=1369&team=189577&timezone=Asia/Tokyo&time=24&width=100%25&height=200&font=Verdana&fs=12&lh=22&bg=0b0e2e&fc=ffffff&tlink=1&scfs=22&scfc=ffffff&scb=1&sclg=1&sh=1&hfb=1&hbc=3bafda&hfc=ffffff">
+</iframe>
+
+        <p class="text-center mt-2" style="font-size: 0.9rem;">
+          Powered by <a href="https://www.fctables.com/" target="_blank" class="text-warning">FcTables</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <!-- Movies Details -->
+    <div class="hobby-details container" id="movies-details">
+      <div class="row align-items-center">
         <div class="col-md-6 mb-4">
-          <div class="card bg-dark text-white shadow p-4">
-            <h4 class="text-warning mb-3"><i class="fas fa-trophy me-2"></i>My Football Journey</h4>
-            <ul class="list-unstyled">
-              <li class="mb-2">
-                <i class="fas fa-futbol me-2 text-success"></i>
-                <strong>Middle School Champion</strong> – Regional Level
-              </li>
-              <li class="mb-2">
-                <i class="fas fa-users me-2 text-primary"></i>
-                <strong>Inter-University Runner-Up</strong> – CMU Team
-              </li>
-              <li class="mb-2">
-                <i class="fas fa-heartbeat me-2 text-danger"></i>
-                Built discipline, teamwork & sportsmanship
-              </li>
-            </ul>
-          </div>
+          <h4>🎬 Favorite Director: Quentin Tarantino</h4>
+          <p>I love his sharp dialogue, nonlinear storytelling, and bold visual style. I also completed a directing course and led an animated project as coursework.</p>
         </div>
-    
-        <!-- Right Column: Manchester United Matches -->
         <div class="col-md-6 mb-4">
-          <div class="card bg-dark text-white shadow p-4">
-            <h4 class="text-danger mb-3"><i class="fas fa-shield-alt me-2"></i>Manchester United</h4>
-            <p class="fw-bold text-warning">🕹️ Last 3 Matches</p>
-            <ul class="list-group list-group-flush mb-3">
-              <li class="list-group-item bg-dark text-white border-0">vs Chelsea – 1:2 (L)</li>
-              <li class="list-group-item bg-dark text-white border-0">vs Liverpool – 2:2 (D)</li>
-              <li class="list-group-item bg-dark text-white border-0">vs Brighton – 3:1 (W)</li>
-            </ul>
-            <p class="fw-bold text-warning">📅 Upcoming Matches</p>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item bg-dark text-white border-0">vs Man City – May 11</li>
-              <li class="list-group-item bg-dark text-white border-0">vs Arsenal – May 18</li>
-            </ul>
-          </div>
+          <iframe width="100%" height="250" src="https://www.youtube.com/embed/s7EdQ4FqbhY" title="Pulp Fiction Trailer" allowfullscreen></iframe>
         </div>
       </div>
     </div>
-    
-    
 
-    <div class="hobby-details" id="movies-details">
-      <h4>🎬 Movie Passion</h4>
-      <p>Favorite director: Quentin Tarantino</p>
-      <p>Directed animations in coursework</p>
-      <iframe width="100%" height="250" src="https://www.youtube.com/embed/s7EdQ4FqbhY" title="Pulp Fiction Trailer" allowfullscreen></iframe>
+    <!-- Music Details -->
+    <div class="hobby-details container" id="music-details">
+      <div class="row align-items-center">
+        <div class="col-md-6 mb-4">
+          <h4>🎧 Favorite Artists</h4>
+          <p>2Pac, Nas, Eminem, J. Cole, Kendrick Lamar—artists who shaped my taste and philosophy through lyrics and storytelling.</p>
+        </div>
+        <div class="col-md-6 mb-4">
+          <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/53WWD2BBC6Jcip8wy5CniE?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        </div>
+      </div>
     </div>
 
-    <div class="hobby-details" id="music-details">
-      <h4>🎧 Favorite Artists</h4>
-      <p>2Pac, Nas, Eminem, J. Cole, Kendrick Lamar</p>
-      <iframe width="100%" height="250" src="https://www.youtube.com/embed/_Yhyp-_hX2s" title="2Pac - Changes" allowfullscreen></iframe>
+<!-- Reading Details -->
+<div class="hobby-details container" id="reading-details">
+  <h4>📚 Favorite Books</h4>
+  <div class="row">
+    <!-- Book 1: The Richest Man in Babylon -->
+    <div class="col-md-3 col-sm-6 mb-4 text-center">
+      <a href="https://www.google.com/search?q=The+Richest+Man+in+Babylon+George+Clason" target="_blank">
+        <img src="./assets/images/babylon.jpg" alt="The Richest Man in Babylon" class="img-fluid rounded mb-2" />
+        <p>The Richest Man in Babylon</p>
+      </a>
     </div>
-
-    <div class="hobby-details" id="reading-details">
-      <h4>📚 Favorite Books</h4>
-      <ul>
-        <li><a href="https://www.amazon.com/dp/B08N5WRWNW" target="_blank">The Richest Man in Babylon</a></li>
-        <li><a href="https://www.amazon.com/dp/B003UYU3X4" target="_blank">Mourinho: Anatomy of a Winner</a></li>
-        <li><a href="https://www.amazon.com/dp/0099448770" target="_blank">A Wild Sheep Chase - Murakami</a></li>
-        <li><a href="https://www.amazon.com/dp/B06XFW9RY2" target="_blank">Ikigai</a></li>
-      </ul>
+    <!-- Book 2: Mourinho: Anatomy of a Winner -->
+    <div class="col-md-3 col-sm-6 mb-4 text-center">
+      <a href="https://www.google.com/search?q=Mourinho+Anatomy+of+a+Winner+Patrick+Barclay" target="_blank">
+        <img src="./assets/images/morinho.jpg" alt="Mourinho: Anatomy of a Winner" class="img-fluid rounded mb-2" />
+        <p>Mourinho: Anatomy of a Winner</p>
+      </a>
+    </div>
+    <!-- Book 3: A Wild Sheep Chase -->
+    <div class="col-md-3 col-sm-6 mb-4 text-center">
+      <a href="https://www.google.com/search?q=A+Wild+Sheep+Chase+Haruki+Murakami" target="_blank">
+        <img src="./assets/images/murakami.jpg" alt="A Wild Sheep Chase" class="img-fluid rounded mb-2" />
+        <p>A Wild Sheep Chase</p>
+      </a>
+    </div>
+    <!-- Book 4: Ikigai -->
+    <div class="col-md-3 col-sm-6 mb-4 text-center">
+      <a href="https://www.google.com/search?q=Ikigai+The+Japanese+Secret+to+a+Long+and+Happy+Life" target="_blank">
+        <img src="./assets/images/ikigai.jpg" alt="Ikigai" class="img-fluid rounded mb-2" />
+        <p>Ikigai: The Japanese Secret to a Long and Happy Life</p>
+      </a>
     </div>
   </div>
+</div>
+
 </section>
+
 
 
 

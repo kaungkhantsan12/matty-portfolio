@@ -21,6 +21,7 @@ body {
   color: #333;
   background-color: #f4f4f4;
   overflow-x: hidden;
+  padding-top: 100px; 
 }
 
   /* Header */
@@ -143,7 +144,8 @@ body {
   align-items: center;
   height: 100vh;
   text-align: center;
-  padding: 0 15px; /* Add some padding for smaller screens */
+  min-height: 100vh;
+  padding: 80px 15px 20px;
 }
 
 .hero-title {
@@ -201,8 +203,8 @@ body {
 
 .profile-photo {
   border-radius: 50%;
-  width: 250px;
-  height: 250px;
+  width: 320px;
+  height: 320px;
   object-fit: cover;
 }
 
@@ -211,8 +213,8 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 280px;
-  height: 280px;
+  width: 360px;
+  height: 360px;
   background: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
 }
@@ -747,6 +749,65 @@ body {
 
 .hobby-details h4 {
   font-weight: 600;
+}
+.ratio {
+  background-color: #000;
+  border: 2px solid #f1c40f;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* Reading Details Section */
+#reading-details {
+  border-radius: 12px;
+  padding: 40px 20px;
+  margin-top: 40px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* Heading Styling */
+#reading-details h4 {
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Individual Book Card */
+#reading-details .col-md-3 {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 15px;
+}
+
+#reading-details .col-md-3:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Book Image */
+#reading-details img {
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+}
+
+/* Book Title */
+#reading-details p {
+  font-size: 1rem;
+  margin-top: 10px;
+  color: #dfdddd;
+  font-weight: 500;
+}
+
+/* Anchor Styling */
+#reading-details a {
+  text-decoration: none;
+  color: inherit;
+}
+
+#reading-details a:hover p {
+  color: #007BFF;
 }
 
 
