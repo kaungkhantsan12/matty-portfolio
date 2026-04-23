@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//c/Users/kaung/.claude/projects/c--Users-kaung-matty-portfolio//**)",
+      "Read(//c/Users/kaung/**)"
+    ]
+  }
+}

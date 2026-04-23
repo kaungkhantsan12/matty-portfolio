@@ -528,135 +528,348 @@ body {
 
 
 /* ========================== */
-/* 🚀 Project Section Styles  */
+/*  Projects Section          */
 /* ========================== */
 .projects {
-  background: #00053e; /* dark background like education section */
+  background: #00053e;
   color: #ffffff;
-  padding: 60px 20px;
-  text-align: center;
-  min-height: 700px;
-  height: 800px;
+  padding: 60px 20px 80px;
 }
 
-.project-item {
+.projects-header h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #fff;
+}
+
+.projects-header p {
+  color: #888;
+  font-size: 1.05rem;
+}
+
+.section-label {
+  padding-left: 14px;
+  border-left: 4px solid #ffc107;
+  margin-bottom: 28px;
+}
+
+.section-label h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 4px;
+}
+
+.section-label p {
+  color: #888;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.all-projects-section {
+  margin-top: 60px;
+}
+
+/* ── Featured Cards ── */
+.featured-card {
+  background: #08093a;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid #1c2260;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  background-color: transparent; /* transparent to inherit .projects bg */
-  min-height: 500px;
 }
 
-.project-photo {
-  height: 400px;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.featured-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 48px rgba(255, 193, 7, 0.18);
+  border-color: #ffc107;
+}
+
+.featured-card-image {
+  position: relative;
+  height: 200px;
   overflow: hidden;
+  flex-shrink: 0;
 }
 
-.project-photo img {
+.featured-card-img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
+  display: block;
 }
 
-.project-description {
-  background-color: transparent; /* transparent to match section bg */
+.featured-card-gradient {
   width: 100%;
-  padding: 15px;
-  text-align: center;
-  z-index: 2;
-  position: relative;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.project-description h5 {
-  font-size: 1.25rem;
-  font-weight: bold;
-  color: #ffffe0; /* light yellow for heading */
+.featured-card-icon {
+  font-size: 3.5rem;
+  color: rgba(255, 255, 255, 0.25);
 }
 
-.project-description p {
-  font-size: 1rem;
-  color: #ffffff;
+.project-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 0.4px;
+  text-shadow: none;
 }
 
-.tech-stack {
-  margin-top: 10px;
+.featured-card-body {
+  padding: 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
 }
 
-.tech-stack span {
-  display: inline-block;
-  margin: 3px;
-  padding: 5px 10px;
-  background-color: #ffc107;
-  color: #222;
-  border-radius: 5px;
+.featured-card-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #ffd700;
+  margin-bottom: 4px;
+  line-height: 1.3;
+}
+
+.featured-card-tagline {
+  font-size: 0.82rem;
+  color: #888;
+  margin-bottom: 10px;
+  font-style: italic;
+}
+
+.featured-card-desc {
   font-size: 0.85rem;
+  color: #bbb;
+  line-height: 1.55;
+  flex: 1;
+  margin-bottom: 16px;
+}
+
+.featured-card-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: auto;
+}
+
+.tech-tag {
+  display: inline-block;
+  padding: 3px 10px;
+  background: rgba(255, 193, 7, 0.12);
+  color: #ffc107;
+  border: 1px solid rgba(255, 193, 7, 0.28);
+  border-radius: 12px;
+  font-size: 0.72rem;
   font-weight: 600;
 }
 
-/* Carousel Controls */
-/* Carousel Arrow Controls */
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-  background-color: #ffc107;
-  border: 2px solid #fff;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  background-size: 60% 60%;
-  background-repeat: no-repeat;
-  background-position: center;
-  filter: drop-shadow(0 0 2px black);
+/* ── Mini Cards (All Projects) ── */
+.mini-card {
+  background: #0b0e38;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #1c2260;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  display: flex;
+  flex-direction: column;
 }
 
-
-/* Carousel Indicators Styling */
-.carousel-indicators {
-  list-style: none !important;
-  padding-left: 0;
-  margin-bottom: 20px;
-  position: relative;
-  z-index: 3;
-  position: relative;
-}
-.carousel-indicators li {
-  background-color: #ffc107; /* Yellow */
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  margin: 5px;
-  border: 1px solid #fff;
-  transition: all 0.3s ease-in-out;
-  opacity: 0.7;
+.mini-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 28px rgba(255, 193, 7, 0.14);
+  border-color: rgba(255, 193, 7, 0.5);
 }
 
-.carousel-indicators .active {
-  background-color: #ffffff;
-  opacity: 1;
+.mini-card-img {
+  width: 100%;
+  height: 130px;
+  object-fit: cover;
+  display: block;
 }
 
-
-/* Hover effect (optional) */
-.tech-stack span:hover {
-  background-color: #ffda55;
-  transition: background-color 0.3s ease;
+.mini-card-body {
+  padding: 14px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
-/* Responsive Fix */
-@media (max-width: 768px) {
-  .col-md-4 {
-    flex: 0 0 100%;
-    max-width: 100%;
-  }
+.mini-card-title {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 6px;
+}
+
+.mini-card-desc {
+  font-size: 0.78rem;
+  color: #999;
+  line-height: 1.45;
+  flex: 1;
+  margin-bottom: 10px;
+}
+
+.mini-card-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.tech-tag-sm {
+  display: inline-block;
+  padding: 2px 8px;
+  background: rgba(100, 149, 237, 0.12);
+  color: #6fa3ef;
+  border: 1px solid rgba(100, 149, 237, 0.28);
+  border-radius: 8px;
+  font-size: 0.68rem;
+  font-weight: 600;
+}
+
+@media (max-width: 576px) {
   .projects {
-    height: auto;         /* Let it grow based on content */
-    min-height: auto;     /* Remove fixed min-height */
-    padding-bottom: 100px; /* Add space for carousel indicators */
+    padding: 40px 12px 60px;
   }
+  .featured-card-image {
+    height: 160px;
+  }
+}
+
+
+/* ========================== */
+/*  Skills Section            */
+/* ========================== */
+.skills {
+  background-color: #000108;
+  padding: 60px 0;
+}
+
+.skills h2 {
+  font-size: 2rem;
+  color: #fff;
+}
+
+.skill-category {
+  background: #070a2a;
+  border: 1px solid #1a2260;
+  border-radius: 14px;
+  padding: 18px 22px;
+  margin-bottom: 14px;
+  transition: border-color 0.3s ease;
+}
+
+.skill-category:hover {
+  border-color: rgba(255, 193, 7, 0.4);
+}
+
+.skill-category-title {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  color: #ffc107;
+  margin-bottom: 12px;
+}
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.skill-tags span {
+  display: inline-block;
+  padding: 5px 14px;
+  background: #111540;
+  color: #d0d0e8;
+  border-radius: 20px;
+  font-size: 0.82rem;
+  font-weight: 500;
+  border: 1px solid #2a3070;
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+  cursor: default;
+}
+
+.skill-tags span:hover {
+  background: #ffc107;
+  color: #000;
+  border-color: #ffc107;
+}
+
+/* ── Core Skills Highlight Cards ── */
+.highlight-skill-card {
+  background: #070a2a;
+  border: 1px solid #1a2260;
+  border-radius: 14px;
+  padding: 22px 16px;
+  text-align: center;
+  height: 100%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  cursor: default;
+}
+
+.highlight-skill-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 32px rgba(255, 193, 7, 0.2);
+  border-color: #ffc107;
+}
+
+.highlight-skill-card i {
+  color: #ffc107;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.highlight-skill-card h6 {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 6px;
+}
+
+.highlight-skill-card p {
+  font-size: 0.75rem;
+  color: #888;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* Divider between highlight row and tag cloud */
+.skills-divider {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  color: #444;
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.skills-divider::before,
+.skills-divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #1a2260;
+}
+
+.skills-divider span {
+  color: #555;
+  white-space: nowrap;
 }
 
 
