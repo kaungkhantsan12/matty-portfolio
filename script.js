@@ -791,3 +791,52 @@ hobbyBoxes.forEach(box => {
     box.classList.add("selected");
   });
 });
+
+/* ─────────────────────────────────────────
+   HOME SECTION FLOATING PARTICLES
+───────────────────────────────────────── */
+(function initHomeParticles() {
+  const container = document.getElementById('homeParticles');
+  if (!container) return;
+
+  const symbols = [
+    // Stars & sparkles (most common)
+    '★', '✦', '✧', '·', '•', '∗', '✨', '💫',
+    // Robots & space
+    '🤖', '🚀', '🛸', '⭐',
+    // Language signs (fits Matty's multilingual identity)
+    '日', '語', '字', '学', '的', '한', '漢',
+    // Code & AI symbols
+    '{ }', '</>', '[ ]', '#', '@', '⚡', '∞',
+  ];
+
+  const count = 38;
+
+  for (let i = 0; i < count; i++) {
+    const el = document.createElement('span');
+    el.className = 'home-particle';
+
+    const symbol = symbols[Math.floor(Math.random() * symbols.length)];
+    el.textContent = symbol;
+
+    const fontSize = 0.55 + Math.random() * 1.1;
+    const opacity = 0.15 + Math.random() * 0.45;
+    const duration = 12 + Math.random() * 22;
+    const delay = Math.random() * 18;
+    const leftPct = Math.random() * 100;
+    const drift = (Math.random() - 0.5) * 120;
+    const rotate = (Math.random() - 0.5) * 360;
+
+    el.style.cssText = `
+      left: ${leftPct}%;
+      font-size: ${fontSize}rem;
+      animation-duration: ${duration}s;
+      animation-delay: ${delay}s;
+      --p-opacity: ${opacity};
+      --p-drift: ${drift}px;
+      --p-rotate: ${rotate}deg;
+    `;
+
+    container.appendChild(el);
+  }
+})();
