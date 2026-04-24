@@ -1132,6 +1132,49 @@ body.lang-ja .navbar-nav {
   animation: slideFade 0.4s ease;
 }
 
+/* ── Man Utd match widget ── */
+.mu-match-widget {
+  background: #1a0e0b;
+  border: 1px solid #3d2520;
+  border-radius: 8px;
+  padding: 10px 14px;
+}
+.mu-match-label {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #BC7B6F;
+  margin-bottom: 6px;
+}
+.mu-match-body {
+  font-size: 0.85rem;
+  color: #ddd;
+}
+.mu-match-teams {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-bottom: 4px;
+}
+.mu-match-score {
+  background: #DA291C;
+  color: #fff;
+  border-radius: 4px;
+  padding: 1px 8px;
+  font-size: 0.95rem;
+  min-width: 40px;
+  text-align: center;
+}
+.mu-match-score.upcoming { background: #333; color: #aaa; }
+.mu-match-meta {
+  font-size: 0.75rem;
+  color: #888;
+  text-align: center;
+}
+
 @keyframes slideFade {
   from { opacity: 0; transform: translateY(10px); }
   to   { opacity: 1; transform: translateY(0); }
