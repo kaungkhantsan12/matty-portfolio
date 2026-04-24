@@ -170,6 +170,12 @@ body {
   will-change: transform, opacity;
 }
 
+@keyframes particleBurst {
+  0%   { transform: translate(-50%, -50%) scale(0.2); opacity: 1; }
+  55%  { opacity: 0.9; }
+  100% { transform: translate(calc(-50% + var(--bx)), calc(-50% + var(--by))) scale(0.7); opacity: 0; }
+}
+
 @keyframes particleDrift {
   0% {
     transform: translateY(0) translateX(0) rotate(0deg) scale(1);

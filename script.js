@@ -575,6 +575,7 @@ const featuredProjects = [
     gradient: null,
     icon: null,
     link: null,
+    presentationLink: "https://canva.link/35fh4kl6vitos78",
     badge: "Final Year Project",
     badgeColor: "#20c997",
     tech: ["Python", "YOLOv8", "ByteTrack", "SigLIP", "UMAP", "KMeans", "OpenCV", "PyTorch", "FFmpeg", "React (Next.js)", "Node.js", "PostgreSQL", "Redis", "BullMQ", "Docker", "HLS.js"]
@@ -635,6 +636,7 @@ const featuredProjects = [
     gradient: null,
     icon: null,
     link: null,
+    presentationLink: "https://canva.link/9unoyv3479a9vsm",
     badge: "ML · Data Science",
     badgeColor: "#e83e8c",
     tech: ["Python", "XGBoost", "TensorFlow/Keras", "scikit-learn", "Pandas", "NumPy", "Matplotlib", "Feature Engineering"]
@@ -705,6 +707,12 @@ function loadFeaturedProjects() {
          </a>`
       : "";
 
+    const presentationBtn = project.presentationLink
+      ? `<a href="${project.presentationLink}" target="_blank" rel="noopener noreferrer" class="featured-card-link-btn">
+           <i class="fas fa-file-powerpoint me-1"></i> View Presentation
+         </a>`
+      : "";
+
     container.innerHTML += `
       <div class="col-lg-4 col-md-6 d-flex mb-4">
         <div class="featured-card flex-fill">
@@ -718,6 +726,7 @@ function loadFeaturedProjects() {
             <p class="featured-card-desc">${description}</p>
             <div class="featured-card-tech">${techHTML}</div>
             ${linkBtn}
+            ${presentationBtn}
           </div>
         </div>
       </div>
@@ -838,5 +847,48 @@ hobbyBoxes.forEach(box => {
     `;
 
     container.appendChild(el);
+  }
+})();
+
+/* One-time burst on page load */
+(function burstHomeParticles() {
+  const section = document.getElementById('home');
+  const container = document.getElementById('homeParticles');
+  if (!section || !container) return;
+
+  const symbols = ['★', '✦', '✧', '💫', '⭐', '🤖', '🚀', '✨', '日', '</>','{ }', '⚡', '∗', '·', '◆'];
+  const count = 36;
+  const cx = section.offsetWidth / 2;
+  const cy = section.offsetHeight / 2;
+
+  for (let i = 0; i < count; i++) {
+    const el = document.createElement('span');
+    el.style.position = 'absolute';
+    el.style.pointerEvents = 'none';
+    el.style.userSelect = 'none';
+    el.textContent = symbols[Math.floor(Math.random() * symbols.length)];
+
+    const angle = (i / count) * 2 * Math.PI + (Math.random() - 0.5) * 0.4;
+    const dist  = 120 + Math.random() * 340;
+    const bx    = Math.cos(angle) * dist;
+    const by    = Math.sin(angle) * dist;
+    const size  = 0.7 + Math.random() * 1.3;
+    const dur   = 0.9 + Math.random() * 0.7;
+    const delay = Math.random() * 0.15;
+
+    el.style.cssText = `
+      position: absolute;
+      left: ${cx}px;
+      top: ${cy}px;
+      font-size: ${size}rem;
+      pointer-events: none;
+      user-select: none;
+      --bx: ${bx}px;
+      --by: ${by}px;
+      animation: particleBurst ${dur}s cubic-bezier(0.15, 0.8, 0.35, 1) ${delay}s forwards;
+    `;
+
+    container.appendChild(el);
+    setTimeout(() => el.remove(), (dur + delay) * 1000 + 100);
   }
 })();
