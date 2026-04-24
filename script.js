@@ -16,7 +16,10 @@ for (let i = 0; i < navbarLinks.length; i++) {
   });
 }
 
-const professions = ["Software Engineer", "AI Engineer", "Full-Stack Developer", "Data Analyst", "YouTuber"];
+const professionsEn = ["Software Engineer", "AI Engineer", "Full-Stack Developer", "Data Analyst", "YouTuber"];
+const professionsJa = ["ソフトウェアエンジニア", "AIエンジニア", "フルスタック開発者", "データアナリスト", "YouTuber"];
+let currentLang = "en";
+let professions = professionsEn;
 let index = 0;
 const professionSpan = document.getElementById("profession");
 
@@ -32,6 +35,101 @@ professionSpan.style.transition = "opacity 0.3s ease";
 professionSpan.textContent = professions[0];
 index = 1;
 setInterval(toggleProfession, 3000);
+
+/* ─────────────────────────────────────────
+   LANGUAGE TOGGLE
+───────────────────────────────────────── */
+const i18n = {
+  en: {
+    "nav-home": "Home",
+    "nav-journey": "Journey",
+    "nav-about": "About Me",
+    "nav-education": "Education",
+    "nav-experience": "Experience",
+    "nav-capabilities": "Capabilities",
+    "nav-skills": "Skills",
+    "nav-languages": "Languages & Advocacy",
+    "nav-projects": "Projects",
+    "nav-hobby": "Hobby",
+    "nav-contact": "Connect",
+    "nav-cv": "CV",
+    "hero-greeting": "Hello, I'm",
+    "hero-iam": "I am a",
+    "hero-talk": "Let's Talk",
+    "hero-portfolio": "Portfolio",
+    "flip-hint": "↩ tap to flip",
+    "section-about": "About Me",
+    "about-text": "I'm a globally-minded software engineer blending rigorous academic foundations with hands-on, full-cycle project experience. Now pursuing my B.Sc. in Software Engineering at Chiang Mai University (#2 in Thailand), I bring a unique edge from three formative years in Mechanical Engineering at Yangon Technological University—cut short by civil unrest, but rich in analytical training. With over a decade in Japan and continued immersion in Thailand's tech ecosystem, I thrive in cross-cultural, fast-paced environments. From building scalable full-stack platforms and AI prototypes to producing multimedia content and managing digital communities, I solve problems with creativity, structure, and heart. My journey spans startups, freelance writing, financial consulting, and YouTube content creation—demonstrating both initiative and impact across industries.",
+    "download-cv": "Download CV",
+    "section-education": "Education",
+    "section-experience": "Experience",
+    "section-skills": "Technical Skills",
+    "section-projects": "Projects",
+    "section-projects-sub": "From AI pipelines to full-stack platforms — here's what I build.",
+    "section-contact": "Have an Idea? Let's Talk Code & Coffee ☕",
+    "cv-modal-title": "Download CV",
+    "cv-modal-prompt": "Choose your preferred language:",
+    "cv-en": "English Version",
+    "cv-ja": "日本語版（Japanese）",
+  },
+  ja: {
+    "nav-home": "ホーム",
+    "nav-journey": "旅路",
+    "nav-about": "自己紹介",
+    "nav-education": "学歴",
+    "nav-experience": "職務経歴",
+    "nav-capabilities": "スキル",
+    "nav-skills": "技術スキル",
+    "nav-languages": "言語・社会活動",
+    "nav-projects": "プロジェクト",
+    "nav-hobby": "趣味",
+    "nav-contact": "お問い合わせ",
+    "nav-cv": "履歴書",
+    "hero-greeting": "こんにちは、私は",
+    "hero-iam": "私は",
+    "hero-talk": "話しましょう",
+    "hero-portfolio": "ポートフォリオ",
+    "flip-hint": "↩ タップして裏返す",
+    "section-about": "自己紹介",
+    "about-text": "私はグローバルな視点を持つソフトウェアエンジニアで、厳格な学術的基盤と実践的なフルサイクルのプロジェクト経験を融合させています。現在、タイ第2位のチェンマイ大学でソフトウェアエンジニアリングの学士号を取得中（3年次修了、4年次待機中）です。ミャンマー第1位のヤンゴン工科大学での機械工学の経験（軍事クーデターにより中断）を持ち、日本留学中にJLPT N2を取得しました。フルスタックWebプラットフォームやAIシステムの構築から、ゲーム開発・データ分析・マルチメディアコンテンツ制作まで、多岐にわたる分野で創造性・構造・情熱をもって問題解決に取り組んでいます。",
+    "download-cv": "履歴書ダウンロード",
+    "section-education": "学歴",
+    "section-experience": "職務経歴",
+    "section-skills": "技術スキル",
+    "section-projects": "プロジェクト",
+    "section-projects-sub": "AIパイプラインからフルスタックプラットフォームまで — 私が作るもの。",
+    "section-contact": "アイデアがありますか？コードとコーヒーについて話しましょう ☕",
+    "cv-modal-title": "履歴書ダウンロード",
+    "cv-modal-prompt": "言語を選択してください：",
+    "cv-en": "英語版",
+    "cv-ja": "日本語版",
+  }
+};
+
+function openCV() {
+  document.getElementById("cvPickerOverlay").style.display = "flex";
+}
+
+function closeCVPicker() {
+  document.getElementById("cvPickerOverlay").style.display = "none";
+}
+
+function toggleLanguage() {
+  currentLang = currentLang === "en" ? "ja" : "en";
+  const btn = document.getElementById("langToggle");
+  btn.textContent = currentLang === "en" ? "日本語" : "English";
+  btn.classList.toggle("ja-active", currentLang === "ja");
+  document.body.classList.toggle("lang-ja", currentLang === "ja");
+
+  document.querySelectorAll("[data-i18n]").forEach(el => {
+    const key = el.dataset.i18n;
+    if (i18n[currentLang][key] !== undefined) el.textContent = i18n[currentLang][key];
+  });
+
+  professions = currentLang === "ja" ? professionsJa : professionsEn;
+  index = 1;
+  professionSpan.textContent = professions[0];
+}
 
 /* ─────────────────────────────────────────
    FEATURED PROJECTS

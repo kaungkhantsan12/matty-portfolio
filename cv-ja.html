@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>カウン・カンサン — 履歴書</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', 'Meiryo', 'Segoe UI', Arial, sans-serif;
+      background: #f4f4f4;
+      color: #1a1a1a;
+      font-size: 13px;
+      line-height: 1.65;
+    }
+
+    .download-bar {
+      background: #2c1611;
+      color: #fff;
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+    .download-bar span { font-size: 0.9rem; color: #E4A499; }
+    .dl-btn {
+      background: #BC7B6F;
+      color: #fff;
+      border: none;
+      padding: 8px 22px;
+      border-radius: 4px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .dl-btn:hover { background: #a5665b; }
+    .lang-switch {
+      background: transparent;
+      color: #CCCDC7;
+      border: 1px solid rgba(204,205,199,0.4);
+      border-radius: 20px;
+      padding: 5px 14px;
+      font-size: 0.8rem;
+      cursor: pointer;
+      text-decoration: none;
+      margin-right: 8px;
+    }
+
+    #cv-content {
+      max-width: 800px;
+      margin: 20px auto;
+      background: #fff;
+      padding: 40px 48px;
+      box-shadow: 0 2px 20px rgba(0,0,0,0.12);
+    }
+
+    .cv-header { border-bottom: 3px solid #BC7B6F; padding-bottom: 16px; margin-bottom: 20px; display: flex; align-items: flex-start; gap: 24px; }
+    .cv-name { font-size: 2rem; font-weight: 700; color: #1a1a1a; letter-spacing: -0.5px; }
+    .cv-name-kana { font-size: 0.85rem; color: #888; font-weight: 400; margin-top: 2px; letter-spacing: 2px; }
+    .cv-title { font-size: 0.95rem; color: #BC7B6F; font-weight: 600; margin-top: 4px; margin-bottom: 10px; }
+    .cv-contacts { display: grid; grid-template-columns: 1fr 1fr; gap: 5px 20px; font-size: 0.82rem; color: #555; margin-top: 8px; }
+    .cv-contacts a { color: #555; text-decoration: none; }
+    .cv-contacts i { color: #BC7B6F; margin-right: 5px; width: 14px; text-align: center; }
+    .cv-contacts-divider { grid-column: 1 / -1; border: none; border-top: 1px dashed #e0d0ce; margin: 4px 0; }
+
+    .cv-section { margin-bottom: 20px; }
+    .cv-section-title { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: #BC7B6F; border-bottom: 1px solid #e0d0ce; padding-bottom: 4px; margin-bottom: 12px; }
+
+    .cv-summary { color: #333; font-size: 0.88rem; }
+
+    .edu-entry { margin-bottom: 14px; page-break-inside: avoid; break-inside: avoid; }
+    .edu-entry-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; }
+    .edu-institution { font-weight: 700; color: #1a1a1a; font-size: 0.92rem; }
+    .edu-degree { color: #444; font-size: 0.85rem; margin-top: 1px; }
+    .edu-date { font-size: 0.8rem; color: #888; white-space: nowrap; margin-top: 2px; }
+    .edu-note { font-size: 0.8rem; color: #BC7B6F; margin-top: 3px; }
+    .edu-detail { font-size: 0.8rem; color: #555; margin-top: 3px; }
+
+    .exp-entry { margin-bottom: 13px; page-break-inside: avoid; break-inside: avoid; }
+    .exp-header { display: flex; justify-content: space-between; align-items: flex-start; }
+    .exp-role { font-weight: 700; color: #1a1a1a; font-size: 0.9rem; }
+    .exp-org { color: #BC7B6F; font-size: 0.85rem; }
+    .exp-date { font-size: 0.8rem; color: #888; white-space: nowrap; }
+    .exp-desc { font-size: 0.82rem; color: #444; margin-top: 3px; }
+
+    .proj-entry { margin-bottom: 11px; page-break-inside: avoid; break-inside: avoid; }
+    .proj-title { font-weight: 700; color: #1a1a1a; font-size: 0.88rem; }
+    .proj-tech { font-size: 0.75rem; color: #BC7B6F; margin-left: 6px; }
+    .proj-desc { font-size: 0.8rem; color: #444; margin-top: 2px; }
+
+    .skills-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 6px 20px; }
+    .skill-row { font-size: 0.83rem; color: #333; }
+    .skill-cat { font-weight: 700; color: #1a1a1a; }
+
+    .lang-row { display: flex; gap: 20px; flex-wrap: wrap; }
+    .lang-item { font-size: 0.83rem; }
+    .lang-name { font-weight: 700; }
+    .lang-level { color: #BC7B6F; }
+
+    .cv-section-title { page-break-after: avoid; break-after: avoid; }
+
+    @media print {
+      body { background: #fff; }
+      .download-bar { display: none !important; }
+      #cv-content { margin: 0; padding: 24px 32px; box-shadow: none; max-width: 100%; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="download-bar">
+  <span>カウン・カンサン — 履歴書</span>
+  <div style="display:flex;gap:8px;align-items:center;">
+    <a href="cv.html" target="_blank" class="lang-switch">English Ver.</a>
+    <button class="dl-btn" onclick="downloadPDF()">
+      <i class="fas fa-file-pdf" style="margin-right:6px;"></i>PDFダウンロード
+    </button>
+  </div>
+</div>
+
+<div id="cv-content">
+
+  <!-- ヘッダー -->
+  <div class="cv-header">
+    <img src="assets/images/profile.jpg" alt="カウン・カンサン"
+         style="width:100px;height:100px;border-radius:50%;object-fit:cover;border:3px solid #BC7B6F;flex-shrink:0;"
+         onerror="this.style.display='none'">
+    <div style="flex:1;">
+      <div class="cv-name">カウン・カンサン <span style="font-weight:400;color:#888;font-size:1.1rem;">（マティ）</span></div>
+      <div class="cv-name-kana">KAUNG KHANT SAN · MATTY</div>
+      <div class="cv-title">ソフトウェアエンジニア &nbsp;·&nbsp; AIエンジニア &nbsp;·&nbsp; フルスタック開発者</div>
+      <div class="cv-contacts">
+        <span><i class="fas fa-envelope"></i><a href="mailto:kaungkhantsan12@gmail.com">kaungkhantsan12@gmail.com</a></span>
+        <span><i class="fab fa-github"></i><a href="https://github.com/kaungkhantsan12" target="_blank">github.com/kaungkhantsan12</a></span>
+        <span><i class="fas fa-globe"></i><a href="https://kaungkhantsan12.github.io/matty-portfolio/" target="_blank">ポートフォリオサイト</a></span>
+        <span><i class="fab fa-youtube"></i>Past &amp; Beyond with M（YouTube）</span>
+        <hr class="cv-contacts-divider">
+        <span><i class="fas fa-phone"></i>(+66) 082 474 3037 &nbsp;<span style="color:#BC7B6F;font-size:0.75rem;">タイ</span></span>
+        <span><i class="fas fa-map-marker-alt"></i>ランナー3アパート 3903号室, チェンマイ, タイ</span>
+        <span><i class="fas fa-phone"></i>(+81) 070 8355 4336 &nbsp;<span style="color:#BC7B6F;font-size:0.75rem;">日本</span></span>
+        <span><i class="fas fa-map-marker-alt"></i>東京都足立区西新井本町2-8-14-403</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 職務要約 -->
+  <div class="cv-section">
+    <div class="cv-section-title">職務要約</div>
+    <p class="cv-summary">
+      グローバルな視点を持つソフトウェアエンジニアとして、チェンマイ大学（タイ第2位）でソフトウェアエンジニアリングの学士課程（3年次修了、4年次待機中）に在学中です。ミャンマー第1位のヤンゴン工科大学での機械工学の学習経験（軍事クーデターにより中断）を持ち、日本留学中にJLPT N2を取得。AIビデオ解析、フルスタックプラットフォーム、ゲーム開発、機械学習など多岐にわたるプロジェクトを手がけています。Vue 3・Spring Boot・PythonのAIパイプライン・AWS EC2クラウドデプロイまで幅広いスタックに精通。Docker・CI/CD・RESTful APIを活用した本番レベルのシステム構築の実績を持ちます。異文化適応力・知的好奇心・目的意識を持って技術と向き合っています。
+    </p>
+  </div>
+
+  <!-- 学歴 -->
+  <div class="cv-section">
+    <div class="cv-section-title">学歴</div>
+
+    <div class="edu-entry">
+      <div class="edu-entry-header">
+        <div>
+          <div class="edu-institution">チェンマイ大学 — チェンマイ, タイ <span style="font-weight:400;color:#BC7B6F;font-size:0.8rem;">（タイ第2位）</span></div>
+          <div class="edu-degree">ソフトウェアエンジニアリング学士（国際プログラム・英語授業）</div>
+          <div class="edu-note">GPA 3.44 &nbsp;·&nbsp; 125単位 &nbsp;·&nbsp; 3年次修了 &nbsp;·&nbsp; 4年次待機中</div>
+          <div class="edu-detail">主要科目: アルゴリズム設計・データベースシステム・ソフトウェア設計&アーキテクチャ・コンポーネントベースSE（Vue 3 + Spring Boot）・OS&ネットワーク・基本DevOps（Docker, CI/CD）・AIソフトウェア工学・要件分析・ソフトウェア構築&テスト</div>
+        </div>
+        <div class="edu-date">2023年 – 2027年</div>
+      </div>
+    </div>
+
+    <div class="edu-entry">
+      <div class="edu-entry-header">
+        <div>
+          <div class="edu-institution">赤門会日本語学校 — 東京, 日本</div>
+          <div class="edu-degree">日本語プログラム</div>
+          <div class="edu-note">JLPT N2取得 — ビジネスレベルの日本語力</div>
+        </div>
+        <div class="edu-date">2021年 – 2022年</div>
+      </div>
+    </div>
+
+    <div class="edu-entry">
+      <div class="edu-entry-header">
+        <div>
+          <div class="edu-institution">ヤンゴン工科大学 — ヤンゴン, ミャンマー <span style="font-weight:400;color:#BC7B6F;font-size:0.8rem;">（ミャンマー第1位）</span></div>
+          <div class="edu-degree">機械工学部（3年次・未修了）</div>
+          <div class="edu-note">2021年軍事クーデターにより学業中断 &nbsp;·&nbsp; 大学入学試験全国上位100位 &nbsp;·&nbsp; 4科目優秀（数学・化学・物理・生物）</div>
+          <div class="edu-detail">2年次まで修了: 微積分I〜III・工学物理I-II・工学化学I-II・工学力学I-II・電気工学I-II・工場技術・CAD図面作成。3年次着手（未修了）: 機械の理論・熱力学・流体力学・材料力学・材料科学・工学数学。</div>
+        </div>
+        <div class="edu-date">2017年 – 2021年</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 主要プロジェクト -->
+  <div class="cv-section">
+    <div class="cv-section-title">主要プロジェクト</div>
+
+    <div class="proj-entry">
+      <span class="proj-title">EZstats — AIサッカー分析プラットフォーム</span>
+      <span class="proj-tech">（卒業研究 · チェンマイ大学）</span>
+      <div class="proj-desc">コーチが試合動画をアップロードすると、選手検出・追跡（YOLOv8 + ByteTrack）、チーム分類（SigLIP + UMAP + KMeans）、選手名マッピング、イベント検出（パス・シュート・タッチ）、ヒートマップ生成を自動実行するフルスタックAIプラットフォーム。React/Next.jsダッシュボードで動画リプレイ対応。<em>スタック: Python、YOLOv8、ByteTrack、SigLIP、PyTorch、OpenCV、React、Next.js、Node.js、PostgreSQL、Redis、Docker。</em></div>
+    </div>
+
+    <div class="proj-entry">
+      <span class="proj-title">LegitNews — ソーシャル型フェイクニュース対策プラットフォーム</span>
+      <span class="proj-tech">（Vercel + Dockerデプロイ済み）</span>
+      <div class="proj-desc">記事のリアル/フェイク投票機能を持つコミュニティプラットフォーム。ロールベースアクセス（ゲスト/メンバー/管理者）、カスタムHMAC-SHA256 + PBKDF2 JWT認証、Firebase画像アップロード、ソフトデリート監査証跡、管理ダッシュボード搭載。<em>スタック: Vue 3、TypeScript、Spring Boot、MySQL、Docker、Firebase、Vercel、Tailwind CSS。</em></div>
+    </div>
+
+    <div class="proj-entry">
+      <span class="proj-title">Arakan Quest — 教育用プラットフォームゲーム</span>
+      <span class="proj-tech">（デプロイ済み · Facebook Instant Games）</span>
+      <div class="proj-desc">マリオスタイルのPhaser 3クイズゲームで、ムラウク=ウー王朝の歴史とラカイン文化を教える。5ワールド×5ステージ、英語/ミャンマー語バイリンガルUI、ボスバトル搭載。<em>スタック: Phaser 3、TypeScript、Vite、Capacitor。</em></div>
+    </div>
+
+    <div class="proj-entry">
+      <span class="proj-title">フルスタック書店Webサイト</span>
+      <span class="proj-tech">（AWS EC2 · CI/CD）</span>
+      <div class="proj-desc">スタッフ在庫管理機能付き書店プラットフォーム。JWT+セッション認証、bcrypt、Google Pay連携。Docker containerize、AWS EC2デプロイ、GitHub Actions CI/CD。<em>スタック: Node.js、Express、MySQL、Docker、AWS EC2、GitHub Actions。</em></div>
+    </div>
+
+    <div class="proj-entry">
+      <span class="proj-title">NCAAマーチマッドネス予測モデル</span>
+      <span class="proj-tech">（ML · データサイエンス）</span>
+      <div class="proj-desc">2003〜2016年のNCAAデータで学習したMLパイプライン。チーム効率指標を設計し、XGBoost（精度68.3%、AUC 0.7464）とニューラルネットワーク（66.9%）を比較。ブラケット全体のシミュレーションを実施。<em>スタック: Python、XGBoost、TensorFlow/Keras、scikit-learn、Pandas、NumPy。</em></div>
+    </div>
+  </div>
+
+  <!-- 職務経歴 -->
+  <div class="cv-section">
+    <div class="cv-section-title">職務経歴</div>
+
+    <div class="exp-entry">
+      <div class="exp-header">
+        <div>
+          <div class="exp-role">デジタルプラットフォームマネージャー</div>
+          <div class="exp-org">アラカン学生協会, チェンマイ</div>
+        </div>
+        <div class="exp-date">2025年 – 現在</div>
+      </div>
+      <div class="exp-desc">ミャンマー・ディアスポラ学生団体のデジタルプラットフォームの管理・開発。SNS戦略、コンテンツ制作、コミュニティエンゲージメントツールの統括。</div>
+    </div>
+
+    <div class="exp-entry">
+      <div class="exp-header">
+        <div>
+          <div class="exp-role">共同創設者・主要ライター</div>
+          <div class="exp-org">Your Football in Arakanese</div>
+        </div>
+        <div class="exp-date">2019年 – 現在</div>
+      </div>
+      <div class="exp-desc">ラカイン語でサッカーを伝える非営利文化スポーツプラットフォームを共同設立。若者の言語保全運動を主導し、オリジナルコンテンツ制作・コミュニティ構築・デジタル戦略を担当。</div>
+    </div>
+
+    <div class="exp-entry">
+      <div class="exp-header">
+        <div>
+          <div class="exp-role">コンテンツクリエイター</div>
+          <div class="exp-org">YouTube — "Past &amp; Beyond with M"</div>
+        </div>
+        <div class="exp-date">2020年 – 現在</div>
+      </div>
+      <div class="exp-desc">テック・歴史・ライフスタイル動画を制作。企画・撮影・編集・チャンネル管理まで一貫して担当。</div>
+    </div>
+
+    <div class="exp-entry">
+      <div class="exp-header">
+        <div>
+          <div class="exp-role">サービス・デリバリースタッフ（複数職）</div>
+          <div class="exp-org">菩提樹レストラン · セブンイレブン · Uber Eats — 東京, 日本</div>
+        </div>
+        <div class="exp-date">2021年 – 2023年</div>
+      </div>
+      <div class="exp-desc">日本語を学びながら飲食・小売業で勤務。プロフェッショナルな日本語コミュニケーション能力、規律、異文化適応力を培う。</div>
+    </div>
+
+    <div class="exp-entry">
+      <div class="exp-header">
+        <div>
+          <div class="exp-role">ファイナンシャルサービスコンサルタント</div>
+          <div class="exp-org">AIA ミャンマー</div>
+        </div>
+        <div class="exp-date">2020年 – 2021年</div>
+      </div>
+      <div class="exp-desc">生命保険・ファイナンシャルプランニングの提案業務。顧客関係構築、ニーズ分析、AIA保険商品の知識習得。</div>
+    </div>
+
+    <div class="exp-entry">
+      <div class="exp-header">
+        <div>
+          <div class="exp-role">フリーランスライター</div>
+          <div class="exp-org">M Tech</div>
+        </div>
+        <div class="exp-date">2018年 – 2019年</div>
+      </div>
+      <div class="exp-desc">デジタルメディア向けテクノロジーコンテンツを執筆。英語・ミャンマー語でソフトウェアトレンド、製品レビュー、テックニュースを担当。</div>
+    </div>
+  </div>
+
+  <!-- 技術スキル -->
+  <div class="cv-section">
+    <div class="cv-section-title">技術スキル</div>
+    <div class="skills-grid">
+      <div class="skill-row"><span class="skill-cat">プログラミング言語:</span> Python、Java、JavaScript、TypeScript、SQL</div>
+      <div class="skill-row"><span class="skill-cat">フロントエンド:</span> Vue 3、React/Next.js、HTML5、CSS3、Bootstrap、Tailwind</div>
+      <div class="skill-row"><span class="skill-cat">バックエンド:</span> Spring Boot、Node.js/Express、REST API、JWT、WebSocket</div>
+      <div class="skill-row"><span class="skill-cat">AI・機械学習:</span> YOLOv8、ByteTrack、SigLIP、XGBoost、TensorFlow、PyTorch、scikit-learn、Pandas、NumPy、OpenCV</div>
+      <div class="skill-row"><span class="skill-cat">データベース:</span> MySQL、PostgreSQL、Firebase/Firestore、Redis</div>
+      <div class="skill-row"><span class="skill-cat">DevOps・クラウド:</span> Docker、AWS EC2、GitHub Actions、Linux CLI、BullMQ</div>
+      <div class="skill-row"><span class="skill-cat">開発ツール:</span> Git、Figma、Postman、IntelliJ、VS Code、Vite</div>
+      <div class="skill-row"><span class="skill-cat">ゲーム開発:</span> Phaser 3、Java 2D、Capacitor、Facebook Instant Games</div>
+    </div>
+  </div>
+
+  <!-- 言語・資格 -->
+  <div class="cv-section">
+    <div class="cv-section-title">言語・資格</div>
+    <div class="lang-row">
+      <div class="lang-item"><span class="lang-name">英語</span> — <span class="lang-level">IELTS 7.5（C1）</span></div>
+      <div class="lang-item"><span class="lang-name">日本語</span> — <span class="lang-level">JLPT N2（B2〜C1）</span></div>
+      <div class="lang-item"><span class="lang-name">ミャンマー語</span> — <span class="lang-level">母語</span></div>
+      <div class="lang-item"><span class="lang-name">ラカイン語</span> — <span class="lang-level">母語</span></div>
+      <div class="lang-item"><span class="lang-name">タイ語</span> — <span class="lang-level">学習中</span></div>
+      <div class="lang-item"><span class="lang-name">スペイン語</span> — <span class="lang-level">学習中</span></div>
+    </div>
+  </div>
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+<script>
+  function downloadPDF() {
+    const btn = document.querySelector('.dl-btn');
+    btn.textContent = '生成中…';
+    btn.disabled = true;
+
+    const element = document.getElementById('cv-content');
+    const opt = {
+      margin:      [8, 8, 8, 8],
+      filename:    'Kaung_Khant_San_履歴書.pdf',
+      image:       { type: 'jpeg', quality: 0.98 },
+      html2canvas: { scale: 2, useCORS: true, letterRendering: true },
+      jsPDF:       { unit: 'mm', format: 'a4', orientation: 'portrait' },
+      pagebreak:   { mode: ['avoid-all', 'css', 'legacy'] }
+    };
+
+    html2pdf().set(opt).from(element).save().then(() => {
+      btn.innerHTML = '<i class="fas fa-file-pdf" style="margin-right:6px;"></i>PDFダウンロード';
+      btn.disabled = false;
+    });
+  }
+</script>
+
+</body>
+</html>
