@@ -251,6 +251,15 @@ body {
 .lang-toggle-btn:hover { border-color: #BC7B6F; color: #BC7B6F; }
 .lang-toggle-btn.ja-active { border-color: #BC7B6F; color: #BC7B6F; }
 
+/* ── Navbar mobile compact ── */
+.nav-controls { gap: 6px; }
+@media (max-width: 575px) {
+  .cv-btn-text { display: none; }
+  .nav-cv-btn { padding: 5px 9px; }
+  .lang-toggle-btn { padding: 4px 8px; font-size: 0.72rem; }
+  .nav-controls { gap: 4px; }
+}
+
 body.lang-ja .navbar-nav .nav-link,
 body.lang-ja .navbar-nav .dropdown-toggle {
   font-size: 0.82rem;
