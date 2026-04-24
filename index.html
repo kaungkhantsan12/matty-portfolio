@@ -76,7 +76,8 @@
           Hello, I'm <span class="highlight">Matty</span>
         </h1>
         <p class="hero-text">
-          I am a <span id="profession" class="typewriter-text"></span>
+          <span class="iam-text">I am a</span>
+          <span id="profession" class="typewriter-text"></span>
         </p>
         <div class="btn-group mt-3">
           <a href="#contact" class="btn btn-primary me-3">Let’s Talk</a>
@@ -171,7 +172,10 @@
         <div class="education-box flex-fill p-3" data-aos="zoom-in" data-aos-delay="100">
           <i class="fas fa-university"></i>
           <p><strong>Chiang Mai University</strong></p>
-          <p>B.Sc. in Software Engineering (2023 – 2027)<br><em>Top 10% of cohort</em></p>
+          <p>B.Sc. in Software Engineering (2023 – 2027)<br><em>GPA 3.44 · 125 Credits</em></p>
+          <button class="edu-modal-btn mt-2" data-bs-toggle="modal" data-bs-target="#cmuModal">
+            <i class="fas fa-list-ul me-1"></i> View Courses
+          </button>
         </div>
       </div>
 
@@ -180,7 +184,10 @@
         <div class="education-box flex-fill p-3" data-aos="zoom-in" data-aos-delay="200">
           <i class="fas fa-graduation-cap"></i>
           <p><strong>Yangon Technological University</strong></p>
-          <p>Mechanical Engineering (2017 – 2021)<br><em>3rd Year | Interrupted by military coup</em></p>
+          <p>Mechanical Engineering (2017 – 2021)<br><em>3rd Year | Interrupted by military coup</em><br><em>Matriculation: 4× Distinction</em></p>
+          <button class="edu-modal-btn mt-2" data-bs-toggle="modal" data-bs-target="#ytuModal">
+            <i class="fas fa-file-alt me-1"></i> View Transcript
+          </button>
         </div>
       </div>
 
@@ -603,13 +610,13 @@
 
     <!-- Last Match -->
     <iframe frameborder="0" scrolling="no" width="100%" height="200"
-      src="https://www.fctables.com/teams/manchester-united-189577/iframe/?type=team-last-match&lang_id=2&country=67&template=1369&team=189577&timezone=Asia/Tokyo&time=24&width=100%25&height=200&font=Verdana&fs=12&lh=22&bg=0b0e2e&fc=ffffff&tlink=1&scfs=22&scfc=ffffff&scb=1&sclg=1&sh=1&hfb=1&hbc=3bafda&hfc=ffffff">
+      src="https://www.fctables.com/teams/manchester-united-189577/iframe/?type=team-last-match&lang_id=2&country=67&template=1369&team=189577&timezone=Asia/Tokyo&time=24&width=100%25&height=200&font=Verdana&fs=12&lh=22&bg=1a0e0b&fc=ffffff&tlink=1&scfs=22&scfc=ffffff&scb=1&sclg=1&sh=1&hfb=1&hbc=3bafda&hfc=ffffff">
     </iframe>
 
 
 <!-- Next Match Widget - FcTables Dark Theme -->
 <iframe frameborder="0" scrolling="no" width="100%" height="200"
-  src="https://www.fctables.com/teams/manchester-united-189577/iframe/?type=team-next-match&lang_id=2&country=67&template=1369&team=189577&timezone=Asia/Tokyo&time=24&width=100%25&height=200&font=Verdana&fs=12&lh=22&bg=0b0e2e&fc=ffffff&tlink=1&scfs=22&scfc=ffffff&scb=1&sclg=1&sh=1&hfb=1&hbc=3bafda&hfc=ffffff">
+  src="https://www.fctables.com/teams/manchester-united-189577/iframe/?type=team-next-match&lang_id=2&country=67&template=1369&team=189577&timezone=Asia/Tokyo&time=24&width=100%25&height=200&font=Verdana&fs=12&lh=22&bg=1a0e0b&fc=ffffff&tlink=1&scfs=22&scfc=ffffff&scb=1&sclg=1&sh=1&hfb=1&hbc=3bafda&hfc=ffffff">
 </iframe>
 
         <p class="text-center mt-2" style="font-size: 0.9rem;">
@@ -706,6 +713,172 @@
   </div>
 </section>
 
+
+<!-- ── CMU Courses Modal ── -->
+<div class="modal fade" id="cmuModal" tabindex="-1" aria-labelledby="cmuModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-scrollable">
+    <div class="modal-content edu-modal-content">
+      <div class="modal-header edu-modal-header">
+        <h5 class="modal-title" id="cmuModalLabel">
+          <i class="fas fa-university me-2"></i>Chiang Mai University — B.Sc. Software Engineering
+        </h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p class="edu-modal-meta">Student ID: 662115507 &nbsp;·&nbsp; Overall GPA: <strong>3.44</strong> &nbsp;·&nbsp; Credits: <strong>125</strong> &nbsp;·&nbsp; <em>Click any course to expand description</em></p>
+
+        <div class="edu-semester-block">
+          <h6 class="edu-semester-title">Semester 1 / 2566 (2023)</h6>
+          <details class="course-item"><summary>Philosophy of Sufficiency Economy </summary><p class="course-desc">Framework and definitions of Sufficiency Economy; critique of unbalanced development and capitalism; the three circles of sufficiency (reasonableness, moderation, resilience); applying the philosophy at individual, community, and national scales; case studies of community-based economies and sustainable development in Thailand.</p></details>
+          <details class="course-item"><summary>Calculus for Software Engineering </summary><p class="course-desc">Vector and plane equations; limits and continuity; derivatives, chain rule, and implicit differentiation; linear approximation, graph sketching, and extrema (min/max); L'Hôpital's rule; indefinite and definite integrals; areas between curves and volumes of revolution; sequences and series; partial derivatives and gradients of multivariable functions.</p></details>
+          <details class="course-item"><summary>Internet and Online Community </summary><p class="course-desc">History and architecture of the internet; how the web works (HTTP, DNS, browsers); social media platforms and digital communities; online identity, anonymity, and digital footprints; misinformation and fake news; digital rights and privacy; netiquette and online ethics; cyberbullying and safe internet use; e-commerce and digital economy overview.</p></details>
+          <details class="course-item"><summary>Modern Life and Animation </summary><p class="course-desc">Principles of animation (12 principles: squash/stretch, anticipation, staging, etc.); storyboarding and pre-production planning; cinematography basics (shot types, angles, composition); digital animation tools; character design and rigging; sound design and synchronisation; editing and post-production; final project: producing a complete short animated film from concept to delivery.</p></details>
+          <details class="course-item"><summary>Computers and Programming </summary><p class="course-desc">Introduction to Java: variables, data types, and expressions; operators and type casting; control flow — if/else, switch statements; loops — while, for, do-while; arrays (1D and 2D); method definition and invocation; basic input/output via Scanner. Taught by Asst. Prof. Dr. Parinya Suwansrikham — who later became the EZstats final-year project advisor.</p></details>
+          <details class="course-item"><summary>Digital Literacy </summary><p class="course-desc">Role of IT in modern society; types of information systems and their organisational use; computer hardware and software fundamentals; networking concepts (LAN, WAN, internet); cloud computing and SaaS; productivity software (word processing, spreadsheets, presentations); digital threats — malware, phishing, social engineering; cybersecurity best practices; computer law, intellectual property, and digital ethics.</p></details>
+          <details class="course-item"><summary>Programming Logical Training </summary><p class="course-desc">Computational thinking fundamentals — decomposition, pattern recognition, abstraction, and algorithms; visual programming using Thunkable; event-driven logic and conditions; loops and iteration concepts; variables and data flow; building simple mobile app prototypes; debugging strategies for beginners; introduction to problem-solving methodology before writing traditional code.</p></details>
+        </div>
+
+        <div class="edu-semester-block">
+          <h6 class="edu-semester-title">Semester 2 / 2566 (2024)</h6>
+          <details class="course-item"><summary>Citizenship </summary><p class="course-desc">Concepts and definitions of citizenship; civic rights and responsibilities; awareness of local, national, and global social issues; multicultural societies and social diversity; democracy and political participation; peaceful conflict resolution; environmental citizenship; digital citizenship and online civic engagement; political expression and advocacy in the 21st century.</p></details>
+          <details class="course-item"><summary>Discrete Mathematics </summary><p class="course-desc">Logic and propositional calculus; sets, relations, functions; equivalence relations and partitions; mathematical induction and strong induction; recursion and recurrence relations; general counting principles (permutations, combinations, pigeonhole); elementary graph theory (paths, cycles, connectivity); trees and spanning trees; network flows; Boolean algebra and logic gates.</p></details>
+          <details class="course-item"><summary>Introduction to Entrepreneurship and Business </summary><p class="course-desc">Business ethics and social responsibility; types of business ownership and legal structures; international trade and global business; small business and startup fundamentals; HR management basics; marketing concepts (4Ps, market research); accounting and financial statements; taxation overview; financial management — budgeting, cash flow, securities markets; innovation and entrepreneurial mindset.</p></details>
+          <details class="course-item"><summary>Abstract Data Type and Problem Solving </summary><p class="course-desc">ADT principles and encapsulation; arrays and multi-dimensional structures; stacks and their applications (expression evaluation, backtracking); queues and priority queues; singly/doubly linked lists; binary trees and binary search trees; general trees; graph representations (adjacency matrix/list); algorithm design strategies; Makefiles and build systems; problem decomposition and ADT selection.</p></details>
+          <details class="course-item"><summary>Introduction to Software Engineering </summary><p class="course-desc">Core SE principles and engineering mindset; SDLC models — Waterfall, Incremental, Spiral; Agile manifesto and Scrum framework; sprint planning, retrospectives, and velocity; software process improvement; requirements and specification basics; software quality assurance (SQA); testing fundamentals; version control with Git; collaborative development practices and code review.</p></details>
+          <details class="course-item"><summary>Computer Organization </summary><p class="course-desc">Digital logic gates and Boolean simplification; combinational circuits (adders, multiplexers, decoders); sequential circuits (flip-flops, registers, counters); CPU architecture — ALU, control unit, registers; instruction set architecture (ISA); machine and assembly language; memory hierarchy — cache, RAM, virtual memory; I/O systems and interrupts; pipelining concepts; performance metrics (CPI, MIPS).</p></details>
+          <details class="course-item"><summary>Object Oriented Programming </summary><p class="course-desc">Advanced Java OOP: classes, objects, constructors; inheritance and method overriding; polymorphism (compile-time and runtime); interfaces and abstract classes; encapsulation and access modifiers; exception handling (try/catch/finally, custom exceptions); generics and type safety; Java Collections Framework (ArrayList, HashMap, LinkedList, TreeSet); iterators; introductory design patterns (Singleton, Factory, Observer).</p></details>
+        </div>
+
+        <div class="edu-semester-block">
+          <h6 class="edu-semester-title">Semester 1 / 2567 (2024)</h6>
+          <details class="course-item"><summary>Elementary Statistics </summary><p class="course-desc">Data types and measurement scales; descriptive statistics — mean, median, mode, variance, standard deviation; frequency distributions and histograms; probability rules (addition, multiplication, conditional); Bayes' theorem; discrete distributions (Binomial, Poisson); continuous distributions (Normal, t-distribution); Central Limit Theorem; confidence intervals; hypothesis testing (z-test, t-test, chi-square); correlation and simple linear regression — personally one of my favourite courses.</p></details>
+          <details class="course-item"><summary>Cybersecurity Management </summary><p class="course-desc">Information security principles (CIA triad); threat landscape — malware, ransomware, APTs, insider threats; vulnerability assessment and penetration testing concepts; security frameworks: ISO/IEC 27001, NIST CSF; risk management methodology; security controls (administrative, technical, physical); access control and identity management; incident response and disaster recovery; legal and regulatory compliance; digital supply chain risk management.</p></details>
+          <details class="course-item"><summary>Algorithm Design and Analysis </summary><p class="course-desc">Algorithm correctness and complexity analysis — Big-O, Omega, Theta notations; brute force approaches; divide and conquer with recurrence relations (Master Theorem); greedy algorithms and proof of optimality; dynamic programming (memoisation, tabulation); graph algorithms — BFS, DFS, Dijkstra, Bellman-Ford, Floyd-Warshall, Kruskal, Prim; finite state machines; regular expressions and formal languages; introduction to P vs NP and computational limits.</p></details>
+          <details class="course-item"><summary>Database Systems and Database System Design </summary><p class="course-desc">Database concepts and DBMS architecture; entity-relationship (ER) and enhanced ER (EER) modelling; relational model and schema design; normalisation (1NF, 2NF, 3NF, BCNF); basic and advanced SQL (joins, subqueries, aggregation, views, stored procedures, triggers); transaction management and ACID properties; concurrency control; database application development via REST APIs and phpMyAdmin; data warehousing and OLAP fundamentals.</p></details>
+          <details class="course-item"><summary>Advanced Programming 3 </summary><p class="course-desc">Event-driven programming paradigm; GUI development; exception handling strategies and custom exception hierarchies; concurrency — threads, synchronisation, race conditions, deadlocks; the Executor framework; debugging techniques (breakpoints, watch expressions, profiling); unit testing with JUnit; test-driven development (TDD) basics; build management with Maven/Gradle; code quality and static analysis tools.</p></details>
+          <details class="course-item"><summary>Human Factors in Digital Interaction Design </summary><p class="course-desc">Human perception and cognition in UI design; Gestalt principles; affordances and mental models; information architecture; wireframing and prototyping techniques; accessibility standards (WCAG); usability evaluation methods — heuristic evaluation, cognitive walkthrough, think-aloud testing; user research methods (surveys, interviews, personas); responsive and mobile-first design; iterative user-centred design process.</p></details>
+        </div>
+
+        <div class="edu-semester-block">
+          <h6 class="edu-semester-title">Semester 2 / 2567 (2025)</h6>
+          <details class="course-item"><summary>Mathematics for Software Technology </summary><p class="course-desc">Sources of numerical error (truncation, round-off, floating-point representation); polynomial interpolation — Lagrange and Newton methods; least-squares curve fitting; root-finding — bisection, secant, Newton-Raphson methods; systems of linear equations — Gaussian elimination, Gauss-Jordan, LU decomposition; matrix operations and determinants; eigenvalues and eigenvectors; vector spaces and linear transformations; numerical integration (Simpson's rule, trapezoidal rule).</p></details>
+          <details class="course-item"><summary>Finance for Daily Life </summary><p class="course-desc">Personal financial planning and goal setting; budgeting techniques and cash flow analysis; income taxation basics; credit management — credit scores, loans, interest calculations; banking services and savings strategies; time value of money; investment vehicles — stocks, bonds, mutual funds, ETFs; risk and return tradeoffs; real estate fundamentals; insurance types; retirement and pension planning; financial statement literacy.</p></details>
+          <details class="course-item"><summary>Operating Systems and Computer Networks </summary><p class="course-desc">OS concepts: process states, scheduling algorithms (FCFS, SJF, Round Robin, Priority); inter-process communication; deadlock detection and prevention; memory management — paging, segmentation, virtual memory, page replacement; file systems and I/O management; virtualisation and containers. Networks: OSI and TCP/IP models; application layer (HTTP, DNS, SMTP); transport layer (TCP, UDP, congestion control); network layer (IP, routing algorithms); link layer; wireless and mobile networking; network security fundamentals.</p></details>
+          <details class="course-item"><summary>Basic Development and Operations </summary><p class="course-desc">Git workflow — branching strategies, merge requests, conflict resolution; issue tracking and project management; Linux command line basics; shell scripting; deployment pipelines and environments; Docker — images, containers, volumes, networking, docker-compose; container orchestration concepts (Kubernetes overview); CI/CD principles; GitHub Actions — writing workflows, automated testing, build and deploy pipelines; automated testing integration; monitoring and logging basics.</p></details>
+          <details class="course-item"><summary>Frontend and Web Programming Foundation </summary><p class="course-desc">HTML5 semantic markup; CSS3 — selectors, box model, flexbox, grid; responsive design with Bootstrap; JavaScript ES6+ — DOM manipulation, events, fetch API, promises, async/await; jQuery basics; Node.js and Express.js server-side scripting; EJS templating; RESTful API design principles; database connectivity from Node; session and JWT-based authentication; input validation and security (XSS, CSRF basics); deployment to cloud platforms.</p></details>
+        </div>
+
+        <div class="edu-semester-block">
+          <h6 class="edu-semester-title">Semester 1 / 2568 (2025)</h6>
+          <details class="course-item"><summary>Fundamental English 1  <span class="course-waived">Waived — IELTS 7.5</span></summary><p class="course-desc">Waived based on IELTS Academic score of 7.5 — university threshold was 6.0. Course covers foundational English listening, speaking, reading, and writing for non-native students.</p></details>
+          <details class="course-item"><summary>Fundamental English 2  <span class="course-waived">Waived — IELTS 7.5</span></summary><p class="course-desc">Waived — same IELTS exemption. Course covers intermediate English grammar, academic writing, and oral communication skills.</p></details>
+          <details class="course-item"><summary>Critical Reading and Effective Writing  <span class="course-waived">Waived — IELTS 7.5</span></summary><p class="course-desc">Waived — IELTS 7.5. Course covers analytical reading strategies, academic essay structure, argumentation, and citation practices.</p></details>
+          <details class="course-item"><summary>English for Science and Technology  <span class="course-waived">Waived — IELTS 7.5</span></summary><p class="course-desc">Waived — IELTS 7.5. Course covers technical English — reading research papers, writing lab reports, presenting scientific findings, and discipline-specific vocabulary for engineering and computing.</p></details>
+          <details class="course-item"><summary>Software Requirement Analysis </summary><p class="course-desc">Requirements engineering lifecycle; inception and stakeholder identification; elicitation techniques — interviews, brainstorming, observation, surveys; elaboration and prototyping; use case modelling with actors and scenarios; activity diagrams and sequence diagrams; User Requirement Specification (URS) and System Requirement Specification (SRS) documentation; user journey mapping and wireframing; functional vs non-functional requirements; traceability matrix; requirement negotiation, validation, and change management.</p></details>
+          <details class="course-item"><summary>Software Design and Architecture </summary><p class="course-desc">Software architecture history and evolution; design process and methodology; architecture styles — layered, client-server, microservices, event-driven, pipe-and-filter; architectural quality attributes (scalability, maintainability, performance); architecture evaluation methods; object-oriented design principles (SOLID); GoF Design Patterns — Creational (Factory, Abstract Factory, Singleton, Builder, Prototype), Structural (Adapter, Decorator, Facade, Proxy, Composite), Behavioural (Observer, Strategy, Command, Iterator, State); Low-Level Design (LLD) interview-style problems; Blockchain Design Patterns (guest sessions).</p></details>
+          <details class="course-item"><summary>Component-Based Software Engineering 1 </summary><p class="course-desc">TypeScript fundamentals and strict typing; Vite build tooling; Vue 3 Composition API and component lifecycle; Vue Router for SPA navigation; Pinia state management; CSS component architecture and scoped styles; Spring Boot project setup and MVC pattern; Spring Data JPA — entities, repositories, relationships (OneToMany, ManyToMany); RESTful API design with Spring; dependency injection; cloud service integration; package management (npm, Maven); Spring Security — authentication filters, JWT integration, role-based access control.</p></details>
+          <details class="course-item"><summary>Selected Topics in SE 2 — AI for Software Engineering </summary><p class="course-desc">AI history and intelligent agent concepts; uninformed search — BFS, DFS, iterative deepening; informed search — A*, heuristics, hill climbing; adversarial search (minimax, alpha-beta pruning); knowledge representation — propositional and first-order logic; inference and resolution; Prolog and logic programming; machine learning overview — supervised (regression, classification), unsupervised (clustering); neural networks introduction; Python for AI — NumPy, scikit-learn; practical AI agent implementation.</p></details>
+        </div>
+
+        <div class="edu-semester-block">
+          <h6 class="edu-semester-title">Semester 2 / 2568 (2026) — Current</h6>
+          <details class="course-item"><summary>Artificial Intelligence and Digital Essentials </summary><p class="course-desc">Computer system components (CPU, memory, storage, I/O); networking fundamentals and internet infrastructure; IT security awareness — threats, passwords, data protection; information literacy and research skills; online collaboration tools (Google Workspace, Teams); word processing, spreadsheets, and presentation software proficiency; generative AI concepts — how LLMs work, prompt engineering basics; practical AI tools for productivity; digital wellbeing and responsible AI use.</p></details>
+          <details class="course-item"><summary>Software Construction and Testing </summary><p class="course-desc">SDLC phases and the role of testing; test levels — unit, integration, system, acceptance; test types — functional, non-functional, regression, performance; black-box and white-box testing techniques; test documentation — test plans, test cases, test reports; software construction principles: meaningful naming conventions, clean function design, error and exception handling, effective commenting, code formatting; refactoring and code smells; pair programming and collaborative development; software maintenance strategies — corrective, adaptive, perfective.</p></details>
+          <details class="course-item"><summary>Introduction to Software Business </summary><p class="course-desc">Software as a business — products vs services vs SaaS models; software business environment and competitive landscape; startup lifecycle — ideation, MVP, product-market fit, scaling; business planning and lean canvas; organising and managing a software team; software pricing strategies and licensing models; marketing and sales for tech products; financial statements and basic accounting for software businesses; investor relations and funding rounds; job market landscape — career paths, freelancing vs employment, tech industry trends.</p></details>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── YTU Transcript Modal ── -->
+<div class="modal fade" id="ytuModal" tabindex="-1" aria-labelledby="ytuModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-scrollable">
+    <div class="modal-content edu-modal-content">
+      <div class="modal-header edu-modal-header">
+        <h5 class="modal-title" id="ytuModalLabel">
+          <i class="fas fa-graduation-cap me-2"></i>Yangon Technological University — Mechanical Engineering
+        </h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p class="edu-modal-meta">Enrolled 2017 · Roll No. I.Mech-20 → II.Mech-21 · Studies interrupted by 2021 military coup</p>
+
+        <div class="edu-semester-block">
+          <h6 class="edu-semester-title">Myanmar Matriculation Examination — March 2017</h6>
+          <p style="font-size:0.82rem; color:#BC7B6F; margin-bottom:10px;">
+            <i class="fas fa-trophy me-1"></i> Ranked in the <strong>Top 100 nationally</strong> across all Myanmar Matriculation candidates
+          </p>
+          <table class="edu-table"><tbody>
+            <tr><td>Myanmar</td><td>72 / 100</td><td></td></tr>
+            <tr><td>English</td><td>73 / 100</td><td></td></tr>
+            <tr><td>Mathematics</td><td>97 / 100</td><td class="grade-a">Distinction</td></tr>
+            <tr><td>Chemistry</td><td>94 / 100</td><td class="grade-a">Distinction</td></tr>
+            <tr><td>Physics</td><td>94 / 100</td><td class="grade-a">Distinction</td></tr>
+            <tr><td>Biology</td><td>92 / 100</td><td class="grade-a">Distinction</td></tr>
+          </tbody></table>
+          <p class="edu-sem-gpa">Result: Passed &nbsp;·&nbsp; <strong>4 Distinction subjects</strong></p>
+        </div>
+
+        <div class="edu-semester-block">
+          <h6 class="edu-semester-title">1st Year — 1st Semester (2017–2018)</h6>
+          <table class="edu-table"><tbody>
+            <tr><td>Myanmar I</td></tr>
+            <tr><td>English I &nbsp;<span class="grade-a" style="font-size:0.75rem;">Excellent</span></td></tr>
+            <tr><td>Calculus</td></tr>
+            <tr><td>Engineering Physics I</td></tr>
+            <tr><td>Engineering Chemistry I</td></tr>
+            <tr><td>Basic Engineering Drawing I</td></tr>
+          </tbody></table>
+          <p class="edu-sem-gpa">Result: Passed</p>
+        </div>
+
+        <div class="edu-semester-block">
+          <h6 class="edu-semester-title">1st Year — 2nd Semester (2018)</h6>
+          <table class="edu-table"><tbody>
+            <tr><td>Myanmar II</td></tr>
+            <tr><td>English II</td></tr>
+            <tr><td>Modern Algebra and Analytic Geometry</td></tr>
+            <tr><td>Engineering Physics II</td></tr>
+            <tr><td>Engineering Chemistry II</td></tr>
+            <tr><td>Basic Engineering Drawing II</td></tr>
+          </tbody></table>
+          <p class="edu-sem-gpa">Result: Passed</p>
+        </div>
+
+        <div class="edu-semester-block">
+          <h6 class="edu-semester-title">2nd Year — 1st Semester (2018–2019)</h6>
+          <table class="edu-table"><tbody>
+            <tr><td>English III</td></tr>
+            <tr><td>Calculus II and Complex Analysis I</td></tr>
+            <tr><td>Principles of Electrical Engineering I</td></tr>
+            <tr><td>Workshop Technology I</td></tr>
+            <tr><td>Computer Aided Machine Drawing I</td></tr>
+            <tr><td>Engineering Mechanics I</td></tr>
+          </tbody></table>
+          <p class="edu-sem-gpa">Result: Passed</p>
+        </div>
+
+        <div class="edu-semester-block">
+          <h6 class="edu-semester-title">2nd Year — 2nd Semester (2019)</h6>
+          <table class="edu-table"><tbody>
+            <tr><td>English IV</td></tr>
+            <tr><td>Calculus III and Vector Analysis</td></tr>
+            <tr><td>Principles of Electrical Engineering II</td></tr>
+            <tr><td>Workshop Technology II</td></tr>
+            <tr><td>Computer Aided Machine Drawing II</td></tr>
+            <tr><td>Engineering Mechanics II</td></tr>
+          </tbody></table>
+        </div>
+
+        <p class="mt-3" style="color:#888; font-size:0.85rem;">
+          <i class="fas fa-info-circle me-1"></i>
+          Continued into 3rd year; studies were interrupted and discontinued following Myanmar's military coup in February 2021.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
 
   <!-- Footer -->
   <footer class="footer text-center py-3">

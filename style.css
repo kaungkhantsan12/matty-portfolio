@@ -26,7 +26,7 @@ body {
 
   /* Header */
   header {
-    background-color: hsl(243, 23%, 18%);
+    background-color: #2c1611;
     --shadow: 0 -5px 10px var(--manatee);
     box-shadow: var(--shadow);  
     position: fixed;
@@ -56,7 +56,7 @@ body {
   .navbar,
 .navbar-collapse,
 .navbar-nav {
-  background-color: hsl(243, 23%, 18%) !important; /* ✅ Match to header */
+  background-color: #2c1611 !important; /* ✅ Match to header */
 }
 
 
@@ -73,7 +73,7 @@ body {
   }
 
   header .navbar-link:hover {
-    color: #ffc107;
+    color: #BC7B6F;
   }
 
   .navbar-brand {
@@ -128,16 +128,13 @@ body {
 
     .nav-toggle-btn.active + .navbar-list {
       display: flex;
-      background-color: hsl(243, 23%, 18%) !important;
+      background-color: #2c1611 !important;
     }
   }
 
 /* Home Section */
 .home {
-  background-image: url("./assets/images/hero-bg.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  background: linear-gradient(135deg, #120a08 0%, #2c1611 50%, #1a0e0b 100%);
   color: white;
   display: flex;
   justify-content: center;
@@ -156,10 +153,22 @@ body {
 .hero-text {
   font-size: 2.5rem;
   margin-bottom: 20px;
+  min-height: 6rem;
+  line-height: 1.2;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.iam-text {
+  font-size: 1rem;
+  color: #CCCDC7;
+  font-weight: 400;
+  letter-spacing: 0.5px;
 }
 
 .highlight {
-  color: #f39c12;
+  color: #BC7B6F;
 }
 
 .btn-group {
@@ -173,7 +182,7 @@ body {
 }
 
 .btn-primary {
-  background-color: #f39c12;
+  background-color: #BC7B6F;
   border: none;
 }
 
@@ -192,7 +201,7 @@ body {
 }
 
 .social-links a:hover {
-  color: #f39c12;
+  color: #BC7B6F;
   transform: scale(1.3);
 }
 
@@ -265,7 +274,7 @@ body {
 /* About Section */
 /* About Section Styles */
 .about {
-  background: #0b0e2e;
+  background: #1a0e0b;
   color: #fff;
   padding: 80px 0;
   text-align: center;
@@ -308,7 +317,7 @@ body {
   display: inline-block;
   margin-top: 15px;
   padding: 10px 20px;
-  background: #4262ff; /* Blue color */
+  background: #718A9E; /* Blue color */
   color: white;
   text-decoration: none;
   font-weight: bold;
@@ -317,7 +326,7 @@ body {
 }
 
 .about-text .btn:hover {
-  background: #3148cc;
+  background: #5a7282;
 }
 
 /* Right Side - Info Boxes */
@@ -329,7 +338,7 @@ body {
 }
 
 .info-box {
-  background: #1a1f4a;
+  background: #2c1611;
   padding: 15px;
   border-radius: 8px;
   text-align: left;
@@ -338,7 +347,7 @@ body {
 .info-box h4 {
   font-size: 20px;
   margin-bottom: 5px;
-  color: #ffcc00;
+  color: #E4A499;
 }
 
 .info-box p {
@@ -367,7 +376,7 @@ body {
 
 /* Education Section */
 .education {
-  background: #00053e;
+  background: #120a08;
   color: #d8b81a;
   padding: 60px 20px;
   text-align: center;
@@ -381,7 +390,7 @@ body {
 }
 
 .education-box {
-  background: #0052bd;
+  background: #3d5468;
   padding: 25px;
   border-radius: 12px;
   text-align: center;
@@ -398,7 +407,7 @@ body {
 .education-box i {
   font-size: 28px;
   margin-bottom: 10px;
-  color: #ffc107;
+  color: #BC7B6F;
   display: block;
 }
 
@@ -409,7 +418,7 @@ body {
 
 /* Experience Section */
 .experience {
-  background: #0b0e2e;
+  background: #1a0e0b;
   color: #fff;
   padding: 60px 20px;
 }
@@ -422,7 +431,7 @@ body {
 }
 
 .experience-box {
-  background: #1c1c1e;
+  background: #2a1815;
   padding: 25px;
   border-radius: 12px;
   text-align: center;
@@ -438,7 +447,7 @@ body {
 }
 
 .experience-box strong {
-  color: #ffc107;
+  color: #BC7B6F;
   font-weight: 600;
 }
 
@@ -455,7 +464,7 @@ body {
 
 /* Skills Section */
 .skills {
-  background-color: #000108; /* Dark blue background */
+  background-color: #120a08; /* Dark blue background */
   padding: 50px 0;
 }
 
@@ -463,7 +472,7 @@ body {
   font-size: 2rem;
   margin-bottom: 20px;
   color: white; /* White text color */
-  text-shadow: 2px 2px #0052bd; /* Optional text shadow for a better effect */
+  text-shadow: 2px 2px #3d5468; /* Optional text shadow for a better effect */
 }
 
 .skills .row {
@@ -472,7 +481,7 @@ body {
 }
 
 .skills .container {
-  background-color: #000108; /* Ensure the container has the same dark blue background */
+  background-color: #120a08; /* Ensure the container has the same dark blue background */
 }
 
 .skills .col-md-4 {
@@ -494,11 +503,11 @@ body {
 /* Ensure consistency across all screen sizes */
 @media (min-width: 576px) {
   .skills {
-    background-color: #000108; /* Maintain dark blue background on larger screens */
+    background-color: #120a08; /* Maintain dark blue background on larger screens */
   }
 
   .skills .container {
-    background-color: #000108; /* Ensure container stays dark blue on large screens */
+    background-color: #120a08; /* Ensure container stays dark blue on large screens */
   }
 
   .skills h2 {
@@ -531,7 +540,7 @@ body {
 /*  Projects Section          */
 /* ========================== */
 .projects {
-  background: #00053e;
+  background: #120a08;
   color: #ffffff;
   padding: 60px 20px 80px;
 }
@@ -549,7 +558,7 @@ body {
 
 .section-label {
   padding-left: 14px;
-  border-left: 4px solid #ffc107;
+  border-left: 4px solid #BC7B6F;
   margin-bottom: 28px;
 }
 
@@ -572,10 +581,10 @@ body {
 
 /* ── Featured Cards ── */
 .featured-card {
-  background: #08093a;
+  background: #1f1210;
   border-radius: 16px;
   overflow: hidden;
-  border: 1px solid #1c2260;
+  border: 1px solid #3d2520;
   transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
   display: flex;
   flex-direction: column;
@@ -583,8 +592,8 @@ body {
 
 .featured-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 16px 48px rgba(255, 193, 7, 0.18);
-  border-color: #ffc107;
+  box-shadow: 0 16px 48px rgba(188, 123, 111, 0.18);
+  border-color: #BC7B6F;
 }
 
 .featured-card-image {
@@ -638,7 +647,7 @@ body {
 .featured-card-title {
   font-size: 1.05rem;
   font-weight: 700;
-  color: #ffd700;
+  color: #E4A499;
   margin-bottom: 4px;
   line-height: 1.3;
 }
@@ -668,9 +677,9 @@ body {
 .tech-tag {
   display: inline-block;
   padding: 3px 10px;
-  background: rgba(255, 193, 7, 0.12);
-  color: #ffc107;
-  border: 1px solid rgba(255, 193, 7, 0.28);
+  background: rgba(188, 123, 111, 0.12);
+  color: #BC7B6F;
+  border: 1px solid rgba(188, 123, 111, 0.28);
   border-radius: 12px;
   font-size: 0.72rem;
   font-weight: 600;
@@ -678,10 +687,10 @@ body {
 
 /* ── Mini Cards (All Projects) ── */
 .mini-card {
-  background: #0b0e38;
+  background: #1f1210;
   border-radius: 12px;
   overflow: hidden;
-  border: 1px solid #1c2260;
+  border: 1px solid #3d2520;
   transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
   display: flex;
   flex-direction: column;
@@ -689,7 +698,7 @@ body {
 
 .mini-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 28px rgba(255, 193, 7, 0.14);
+  box-shadow: 0 8px 28px rgba(188, 123, 111, 0.14);
   border-color: rgba(255, 193, 7, 0.5);
 }
 
@@ -731,12 +740,31 @@ body {
 .tech-tag-sm {
   display: inline-block;
   padding: 2px 8px;
-  background: rgba(100, 149, 237, 0.12);
-  color: #6fa3ef;
-  border: 1px solid rgba(100, 149, 237, 0.28);
+  background: rgba(113, 138, 158, 0.12);
+  color: #718A9E;
+  border: 1px solid rgba(113, 138, 158, 0.28);
   border-radius: 8px;
   font-size: 0.68rem;
   font-weight: 600;
+}
+
+.featured-card-link-btn {
+  display: inline-block;
+  margin-top: 14px;
+  padding: 7px 18px;
+  background: rgba(188, 123, 111, 0.15);
+  color: #BC7B6F;
+  border: 1px solid rgba(188, 123, 111, 0.45);
+  border-radius: 20px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.featured-card-link-btn:hover {
+  background: #BC7B6F;
+  color: #fff;
 }
 
 @media (max-width: 576px) {
@@ -753,7 +781,7 @@ body {
 /*  Skills Section            */
 /* ========================== */
 .skills {
-  background-color: #000108;
+  background-color: #120a08;
   padding: 60px 0;
 }
 
@@ -763,8 +791,8 @@ body {
 }
 
 .skill-category {
-  background: #070a2a;
-  border: 1px solid #1a2260;
+  background: #1f1210;
+  border: 1px solid #3d2520;
   border-radius: 14px;
   padding: 18px 22px;
   margin-bottom: 14px;
@@ -772,7 +800,7 @@ body {
 }
 
 .skill-category:hover {
-  border-color: rgba(255, 193, 7, 0.4);
+  border-color: rgba(188, 123, 111, 0.4);
 }
 
 .skill-category-title {
@@ -780,7 +808,7 @@ body {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1.2px;
-  color: #ffc107;
+  color: #BC7B6F;
   margin-bottom: 12px;
 }
 
@@ -793,26 +821,26 @@ body {
 .skill-tags span {
   display: inline-block;
   padding: 5px 14px;
-  background: #111540;
-  color: #d0d0e8;
+  background: #2a1815;
+  color: #CCCDC7;
   border-radius: 20px;
   font-size: 0.82rem;
   font-weight: 500;
-  border: 1px solid #2a3070;
+  border: 1px solid #4a2d26;
   transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
   cursor: default;
 }
 
 .skill-tags span:hover {
-  background: #ffc107;
+  background: #BC7B6F;
   color: #000;
-  border-color: #ffc107;
+  border-color: #BC7B6F;
 }
 
 /* ── Core Skills Highlight Cards ── */
 .highlight-skill-card {
-  background: #070a2a;
-  border: 1px solid #1a2260;
+  background: #1f1210;
+  border: 1px solid #3d2520;
   border-radius: 14px;
   padding: 22px 16px;
   text-align: center;
@@ -823,12 +851,12 @@ body {
 
 .highlight-skill-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 32px rgba(255, 193, 7, 0.2);
-  border-color: #ffc107;
+  box-shadow: 0 10px 32px rgba(188, 123, 111, 0.2);
+  border-color: #BC7B6F;
 }
 
 .highlight-skill-card i {
-  color: #ffc107;
+  color: #BC7B6F;
   margin-bottom: 10px;
   display: block;
 }
@@ -864,7 +892,7 @@ body {
   content: "";
   flex: 1;
   height: 1px;
-  background: #1a2260;
+  background: #3d2520;
 }
 
 .skills-divider span {
@@ -876,7 +904,7 @@ body {
 .card:hover {
   transform: translateY(-5px);
   transition: 0.3s ease;
-  box-shadow: 0 0 15px rgba(255, 193, 7, 0.4);
+  box-shadow: 0 0 15px rgba(188, 123, 111, 0.4);
 }
 
 
@@ -895,11 +923,11 @@ body {
 .languages h2 {
   font-size: 2.2rem;
   font-weight: bold;
-  color: #ffc107;
+  color: #BC7B6F;
 }
 
 .languages i {
-  color: #ffc107;
+  color: #BC7B6F;
   transition: transform 0.3s ease;
 }
 
@@ -928,7 +956,7 @@ body {
 
 .hobby-box.selected {
   background-color: #111;
-  box-shadow: 0 0 12px #ffc107;
+  box-shadow: 0 0 12px #BC7B6F;
 }
 
 .hobby-details {
@@ -965,7 +993,7 @@ body {
 }
 .ratio {
   background-color: #000;
-  border: 2px solid #f1c40f;
+  border: 2px solid #BC7B6F;
   border-radius: 12px;
   overflow: hidden;
 }
@@ -1024,21 +1052,167 @@ body {
 }
 
 
+/* Education modal button */
+.edu-modal-btn {
+  background: rgba(188, 123, 111, 0.15);
+  color: #BC7B6F;
+  border: 1px solid rgba(188, 123, 111, 0.4);
+  border-radius: 20px;
+  padding: 5px 16px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.edu-modal-btn:hover {
+  background: #BC7B6F;
+  color: #fff;
+}
+
+/* Education modals */
+.edu-modal-content {
+  background: #1f1210;
+  color: #CCCDC7;
+  border: 1px solid #3d2520;
+}
+
+.edu-modal-header {
+  background: #2c1611;
+  border-bottom: 1px solid #3d2520;
+  color: #E4A499;
+}
+
+.edu-modal-header .modal-title {
+  color: #E4A499;
+  font-weight: 700;
+}
+
+.edu-modal-meta {
+  font-size: 0.85rem;
+  color: #888;
+  margin-bottom: 20px;
+}
+
+.edu-semester-block {
+  margin-bottom: 28px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #3d2520;
+}
+
+.edu-semester-block:last-child {
+  border-bottom: none;
+}
+
+.edu-semester-title {
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: #BC7B6F;
+  margin-bottom: 10px;
+}
+
+.edu-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.88rem;
+}
+
+.edu-table td {
+  padding: 5px 8px;
+  border-bottom: 1px solid #2a1815;
+  vertical-align: middle;
+}
+
+.edu-table td:first-child {
+  color: #CCCDC7;
+  width: 70%;
+}
+
+.edu-table td:nth-child(2) {
+  color: #888;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.edu-table td:nth-child(3) {
+  text-align: center;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.grade-a { color: #20c997; }
+.grade-b { color: #718A9E; }
+.grade-c { color: #E4A499; }
+.grade-f { color: #e74c3c; }
+
+.edu-sem-gpa {
+  font-size: 0.78rem;
+  color: #888;
+  text-align: right;
+  margin-top: 6px;
+  margin-bottom: 0;
+}
+
+/* Course item expandable rows (CMU modal) */
+.course-item {
+  border-bottom: 1px solid #2a1815;
+}
+.course-item summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 9px 4px;
+  cursor: pointer;
+  color: #CCCDC7;
+  font-size: 0.88rem;
+  list-style: none;
+  user-select: none;
+}
+.course-item summary::-webkit-details-marker { display: none; }
+.course-item summary::after { content: '+'; color: #BC7B6F; margin-left: 10px; flex-shrink: 0; }
+.course-item[open] summary::after { content: '−'; }
+.course-item summary:hover { color: #E4A499; }
+.course-desc {
+  padding: 4px 8px 10px;
+  font-size: 0.82rem;
+  color: #888;
+  line-height: 1.6;
+  margin: 0;
+}
+.cr-badge {
+  font-size: 0.72rem;
+  color: #718A9E;
+  margin-left: 8px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.course-waived {
+  font-size: 0.72rem;
+  color: #BC7B6F;
+  margin-left: 6px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
 /* Contact Section */
 .contact {
-  background-color: #fff;
+  background-color: #1a0e0b;
   padding: 50px 0;
   text-align: center;
+  color: #CCCDC7;
 }
 
 .contact h2 {
   font-size: 2rem;
   margin-bottom: 20px;
+  color: #E4A499;
 }
 
 .contact p {
   font-size: 1.2rem;
-  color: #555;
+  color: #CCCDC7;
 }
 input, textarea {
   border-radius: 8px;
@@ -1047,15 +1221,15 @@ input, textarea {
 }
 
 button[type="submit"]:hover {
-  background-color: #ffc107;
+  background-color: #BC7B6F;
   color: #000;
 }
 
 
 /* Footer */
 footer {
-  background-color: #333;
-  color: white;
+  background-color: #120a08;
+  color: #CCCDC7;
   padding: 20px;
 }
 

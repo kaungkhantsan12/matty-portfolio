@@ -38,12 +38,25 @@ setInterval(toggleProfession, 3000);
 ───────────────────────────────────────── */
 const featuredProjects = [
   {
+    title: "EZstats – AI Football Analysis Platform",
+    tagline: "Final Year Project · CMU Software Engineering · Currently in Progress",
+    description: "Full-stack AI football analytics platform built as a final year project at Chiang Mai University (advised by Asst. Prof. Dr. Parinya Suwansrikham). Coaches upload single-camera match videos; the system automatically detects and tracks players (YOLOv8 + ByteTrack), classifies teams (SigLIP + UMAP + KMeans), maps tracked IDs to real player names, detects events (passes, shots, touches), and generates heatmaps. Results are served through a React/Next.js dashboard with video replay, event timeline, and team/player statistics. Backend uses Node.js + PostgreSQL with Redis/BullMQ for asynchronous video processing jobs.",
+    image: "./assets/images/image3.png",
+    gradient: null,
+    icon: null,
+    link: null,
+    badge: "Final Year Project",
+    badgeColor: "#20c997",
+    tech: ["Python", "YOLOv8", "ByteTrack", "SigLIP", "UMAP", "KMeans", "OpenCV", "PyTorch", "FFmpeg", "React (Next.js)", "Node.js", "PostgreSQL", "Redis", "BullMQ", "Docker", "HLS.js"]
+  },
+  {
     title: "LegitNews – Social Anti-Fake News Platform",
     tagline: "Full-stack community platform to combat misinformation",
     description: "Community-driven platform where users vote Real/Fake on news articles. Implements role-based access (guest / member / admin), JWT authentication with custom HMAC-SHA256 + PBKDF2 (120k iterations), comment system with Firebase image uploads, membership request workflow, soft-delete audit trail, and a full admin dashboard for content moderation. Frontend deployed on Vercel; backend Dockerized with MySQL.",
     image: null,
     gradient: "linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%)",
     icon: "fas fa-shield-alt",
+    link: null,
     badge: "Deployed",
     badgeColor: "#28a745",
     tech: ["Vue 3", "TypeScript", "Vite", "Pinia", "Vue Router", "Axios", "Spring Boot", "Java 17", "MySQL", "Docker", "JWT", "Firebase", "Vercel", "Tailwind CSS"]
@@ -55,6 +68,7 @@ const featuredProjects = [
     image: null,
     gradient: "linear-gradient(135deg, #0d1b2a 0%, #1b3a5c 50%, #415a77 100%)",
     icon: "fas fa-gamepad",
+    link: "https://english-saw-khine-zan-s-amazing-arakan-adventure.pages.dev/",
     badge: "Deployed",
     badgeColor: "#17a2b8",
     tech: ["Phaser 3", "TypeScript", "Vite", "JavaScript", "Capacitor", "Facebook Instant Games", "localStorage"]
@@ -66,6 +80,7 @@ const featuredProjects = [
     image: "./assets/images/bookNerd.jpeg",
     gradient: null,
     icon: null,
+    link: null,
     badge: "AWS EC2",
     badgeColor: "#ff9900",
     tech: ["Node.js", "Express", "MySQL", "JavaScript", "Bootstrap", "Docker", "AWS EC2", "JWT", "Google Pay", "GitHub Actions", "Figma"]
@@ -77,20 +92,10 @@ const featuredProjects = [
     image: "./assets/images/image5.png",
     gradient: null,
     icon: null,
+    link: null,
     badge: "Java Game",
     badgeColor: "#6f42c1",
     tech: ["Java", "OOP", "Custom Game Loop", "Enemy AI", "Collision Physics", "Power-Ups", "Boss Fight", "2D Graphics"]
-  },
-  {
-    title: "EZstats – AI Football Analysis Platform",
-    tagline: "Final Year Project · CMU Software Engineering · Currently in Progress",
-    description: "Full-stack AI football analytics platform built as a final year project at Chiang Mai University (advised by Asst. Prof. Dr. Parinya Suwansrikham). Coaches upload single-camera match videos; the system automatically detects and tracks players (YOLOv8 + ByteTrack), classifies teams (SigLIP + UMAP + KMeans), maps tracked IDs to real player names, detects events (passes, shots, touches), and generates heatmaps. Results are served through a React/Next.js dashboard with video replay, event timeline, and team/player statistics. Backend uses Node.js + PostgreSQL with Redis/BullMQ for asynchronous video processing jobs.",
-    image: "./assets/images/image3.png",
-    gradient: null,
-    icon: null,
-    badge: "Final Year Project",
-    badgeColor: "#20c997",
-    tech: ["Python", "YOLOv8", "ByteTrack", "SigLIP", "UMAP", "KMeans", "OpenCV", "PyTorch", "FFmpeg", "React (Next.js)", "Node.js", "PostgreSQL", "Redis", "BullMQ", "Docker", "HLS.js"]
   },
   {
     title: "NCAA March Madness Predictor",
@@ -99,6 +104,7 @@ const featuredProjects = [
     image: null,
     gradient: "linear-gradient(135deg, #1a0533 0%, #3b0764 50%, #5c1099 100%)",
     icon: "fas fa-basketball-ball",
+    link: null,
     badge: "ML · Data Science",
     badgeColor: "#e83e8c",
     tech: ["Python", "XGBoost", "TensorFlow/Keras", "scikit-learn", "Pandas", "NumPy", "Matplotlib", "Feature Engineering"]
@@ -157,6 +163,12 @@ function loadFeaturedProjects() {
            <i class="${project.icon} featured-card-icon"></i>
          </div>`;
 
+    const linkBtn = project.link
+      ? `<a href="${project.link}" target="_blank" rel="noopener noreferrer" class="featured-card-link-btn">
+           <i class="fas fa-external-link-alt me-1"></i> Play / Visit
+         </a>`
+      : "";
+
     const delay = (i % 3) * 100;
 
     container.innerHTML += `
@@ -171,6 +183,7 @@ function loadFeaturedProjects() {
             <p class="featured-card-tagline">${project.tagline}</p>
             <p class="featured-card-desc">${project.description}</p>
             <div class="featured-card-tech">${techHTML}</div>
+            ${linkBtn}
           </div>
         </div>
       </div>
